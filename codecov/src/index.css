@@ -25,12 +25,13 @@ code {
   background-repeat: no-repeat;
   background-size:contain;
   z-index: -2;
+
 }
 
 footer{
   background-color:#0f1b29;
   color:#fff;
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 i{
@@ -63,4 +64,13 @@ h6{
  font-family: "poppins",'Roboto',"Arial",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
  font-size: 15px;
   line-height: 1.6rem;
+}
+#slanted_div{
+  height: 120px;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  transform: skewY(5deg);
+  margin-bottom: -60px;
+  margin-top: 20px;
 }
