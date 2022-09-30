@@ -59,42 +59,42 @@ function Footer(){
                 <Heading fontSize='17px' mb='20px' color='#fff'>PRODUCT</Heading>
                 <Link to='/features'>Features</Link>
                 <Link to='/integration'>Integration</Link>
-                <Link>Documentation</Link>
+                <Link to='/'>Documentation</Link>
                 <Link>API</Link>
-                <Link>Status</Link>
+                <Link to='/pricing'>Status</Link>
              </Flex>
              
              <Flex direction='column' lineHeight='30px' color='#ffffff'>
                 <Heading fontSize='17px' mb='20px' color='#fff'>SOLUTION</Heading>
-                <Link>Open Source</Link>
-                <Link>Enterprice</Link>
-                <Link>Startup</Link>
-                <Link>Education</Link>
+                <Link to='/customers'>Open Source</Link>
+                <Link to='/customers'>Enterprice</Link>
+                <Link to='/customers'>Startup</Link>
+                <Link to='/customers'>Education</Link>
              </Flex>
              <Flex direction='column' lineHeight='30px' color='#ffffff'>
                 <Heading fontSize='17px' mb='20px' color='#fff'>CUSTOMERS</Heading>
-                <Link>Customers</Link>
-                <Link>Case Studies</Link>
-                <Link>Cummunity</Link>
+                <Link to='/customers'>Customers</Link>
+                <Link to='/pricing'>Case Studies</Link>
+                <Link to='/resources'>Cummunity</Link>
              </Flex>
              <Flex direction='column' lineHeight='30px' color='#ffffff'>
                 <Heading fontSize='17px' mb='20px' color='#fff'>RESOURCES</Heading>
-                <Link>Webinar</Link>
-                <Link>Blog</Link>
-                <Link>Documentation</Link>
+                <Link to='resources'>Webinar</Link>
+                <Link to='/resources'>Blog</Link>
+                <Link to='/resources'>Documentation</Link>
              </Flex>
              <Flex direction='column' lineHeight='30px' color='#ffffff'>
                 <Heading fontSize='17px' mb='20px' color='#fff'>COMPANY</Heading>
-                <Link>Team</Link>
-                <Link>Press</Link>
-                <Link>Carrier</Link>
-                <Link>Write for us</Link>
+                <Link to='/'>Team</Link>
+                <Link to='/integration'>Press</Link>
+                <Link to='/features'>Carrier</Link>
+                <Link to='/contact'>Write for us</Link>
              </Flex>
              <Flex direction='column' lineHeight='30px' color='#ffffff'>
                 <Heading fontSize='17px' mb='20px' color='#fff'>CONTACT US</Heading>
                 <Link to='/contact'>Contact</Link>
-                <Link>Demo</Link>
-                <Link>Support</Link>
+                <Link to='/login'>Demo</Link>
+                <Link to='/contact'>Support</Link>
              </Flex>
             </Flex>
         </Box>

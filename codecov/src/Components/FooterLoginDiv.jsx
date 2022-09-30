@@ -1,5 +1,4 @@
-import {Box,Center,Text,Heading,Flex,Image,SimpleGrid} from  '@chakra-ui/react'
-
+import {Box,Center,Text,Heading,Flex,Image,SimpleGrid, Button} from  '@chakra-ui/react'
 function FooterLoginDiv(){
 
 return   <Center mb='100px'>
@@ -47,7 +46,6 @@ return   <Center mb='100px'>
       <Image maxW='20px' src='https://about.codecov.io/wp-content/themes/codecov/assets/logos/ci/bitbucket/bitbucket-icon.svg' />
       <Heading fontSize='16px'>
        Bitbucket
-
       </Heading>
     </Flex>
    </SimpleGrid>

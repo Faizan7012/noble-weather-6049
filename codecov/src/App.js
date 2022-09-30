@@ -7,7 +7,7 @@ import Footer from './Components/Footer';
 function App() {
   return (
     <div className="App">
-      <Box bg='#0f1b29' p='10px'>
+      <Box className='ad' bg='#0f1b29' p='10px'>
         <Center>
         <Text color='gray' fontWeight='400' >Coming Soon! Need automated test selection powered by code coverage data? Learn more.</Text>
         </Center>

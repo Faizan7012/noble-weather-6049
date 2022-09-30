@@ -1,9 +1,23 @@
 import {Box,Center,Heading,SimpleGrid} from '@chakra-ui/react'
 import LanguageDiv from '../Components/LanguageDiv';
 import FooterLoginDiv from '../Components/FooterLoginDiv';
-import {language,hosts,ci,cp,ts,CTool,Uploaders,ChatIn} from '../Components/Data'
+import {language,hosts,ci,cp,ts,CTool,Uploaders,ChatIn} from '../Components/Data';
+import {useEffect} from 'react';
 function Integration(){
+  useEffect(()=>{
+    document.title = 'Integration - Codecov';
+    let nav =  document.querySelector('nav')
+    let footer =  document.querySelector('footer')
+    let div =  document.querySelector('#slanted_div')
+    let ad =  document.querySelector('.ad')
 
+
+
+    nav.style.display = 'block'
+    footer.style.display = 'block'
+    div.style.display = 'block'
+    ad.style.display = 'block'
+  },[])
 return <Box w='70%' m='auto'>
     <Center>
     <Heading mb='100px'>Integrate Codecov</Heading>

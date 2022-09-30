@@ -1,12 +1,27 @@
 import {Box,Flex,Heading,SimpleGrid,Image,Center, Badge} from '@chakra-ui/react';
 import CIDiv from '../Components/CustomersImageDiv';
 import { SlideImage,customers,slide ,language} from '../Components/Data';
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 function Customers(){
 const [index,setIndex] = useState(0)
 let arr = SlideImage[index]
 let brr = slide[index]
+
+useEffect(()=>{
+  document.title = 'Customers - Codecov';
+  let nav =  document.querySelector('nav')
+  let footer =  document.querySelector('footer')
+  let div =  document.querySelector('#slanted_div')
+  let ad =  document.querySelector('.ad')
+
+
+
+  nav.style.display = 'block'
+  footer.style.display = 'block'
+  div.style.display = 'block'
+  ad.style.display = 'block'
+},[])
 
 
 const handleIndex = (val)=>{

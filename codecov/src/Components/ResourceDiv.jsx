@@ -1,6 +1,6 @@
 import {Box,Image,Text,Heading,Button} from '@chakra-ui/react';
 import {ArrowForwardIcon} from '@chakra-ui/icons';
-
+import {Link} from 'react-router-dom'
 
 function ResourceDiv({img,type,title,forward}){
 
@@ -10,9 +10,12 @@ return <Box boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' borderRadius='10px' pb=
         <Heading mt='30px' fontSize='16px' ml='20px' lineHeight='30px' mb='50px'>
             {title}
         </Heading>
+        <Link to='resources'>
         <Text textAlign='right' fontSize='12px' fontWeight='600' color='#f06' mr='10px'>
             {forward } <ArrowForwardIcon ml='10px' fontSize='15px'/>
         </Text>
+        </Link>
+      
       </Box>
 
 
