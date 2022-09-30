@@ -4,8 +4,14 @@ import { Flex, Spacer,Box,ButtonGroup,Button,Image,  Menu,
     MenuList,
     MenuItem,
     } from '@chakra-ui/react';
+    import { AuthContext } from '../Context/AuthContext';
+import { useContext } from 'react';
 const Navbar = ()=>{
+  const {isAuth,toggleAuth} = useContext(AuthContext);
 
+  const handleLogout=()=>{
+     toggleAuth();
+  }
 
   return(
        <nav style={{padding:'0px 100px',marginTop:'30px'}}>
@@ -26,10 +32,10 @@ const Navbar = ()=>{
   </MenuButton>
   <MenuList>
     <MenuItem>
-    <Link to='/features'>features</Link>
+    <Link to='/features'>Features</Link>
     </MenuItem>
     <MenuItem>
-    <Link to='/integration'>integration</Link>
+    <Link to='/integration'>Integration</Link>
     </MenuItem>
   </MenuList>
 </Menu>
@@ -46,7 +52,10 @@ const Navbar = ()=>{
    <Button border='none' bg='none'>Contact-Us</Button>
    </Link>
    <Link to='/login'>
+    {
+      isAuth?<Button bg='black' color='#fff' _hover={{bg:'black'}} onClick={handleLogout}>Logout</Button>:
    <Button border='none' bg='none'>Login</Button>
+    }
    </Link>
   </ButtonGroup>
 </Flex>

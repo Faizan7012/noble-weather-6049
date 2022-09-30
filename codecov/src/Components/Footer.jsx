@@ -4,7 +4,10 @@ import {Link} from 'react-router-dom';
 function Footer(){
 
 
- return <footer>
+ return <>
+         <div id='slanted_div'>
+              </div>
+       <footer>
         <Box>
             <Flex maxW='600px' justifyContent='space-between' alignItems='center' p='0px 120px'>
                 <Box>
@@ -107,6 +110,7 @@ function Footer(){
           
         </Box>
        </footer>
+       </>
 
 
 }
