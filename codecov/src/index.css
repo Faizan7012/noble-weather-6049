@@ -74,3 +74,71 @@ h6{
   margin-bottom: -60px;
   margin-top: 20px;
 }
+
+
+
+/* -----------------------------slider-------------------------------- */
+
+.slider{
+
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  
+  }
+  
+  .slider-track{
+   display:flex;
+   width: calc(250px * 18);
+   animation: scroll 40s linear infinite;
+  }
+  @keyframes scroll {
+   0%{
+     transform: translateX(0);
+   }
+   100%{
+     transform: translateX(calc(-250px * 9));
+   }
+  }
+  
+  .slide{
+   width: 200px;
+   height: 200px;
+   display: grid;
+   place-items: center;
+   padding: 15px;
+  }
+  
+  .slide_img{
+   max-width: 100px;
+   transition: 1s;
+   max-height: 70px;
+   margin-right: 50px;
+  }
+  .slide_img1{
+
+    max-width: 50px;
+    transition: 1s;
+    max-height: 50px;
+  }
+
+  .slide_img:hover{
+
+  transform: translateZ(20px);
+
+  }
+  .slide_img3{
+    max-width: 80px;
+    max-height: 50px;
+    background-color: none;
+    background: none;
+    border-radius: 10px;
+  }
+
+
+
+/* --------------------------------end slide----------------------------- */

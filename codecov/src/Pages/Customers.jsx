@@ -1,6 +1,6 @@
-import {Box,Flex,Heading,SimpleGrid,Image,Center, Badge} from '@chakra-ui/react';
+import {Box,Flex,Heading,SimpleGrid,Image,Center,Tooltip} from '@chakra-ui/react';
 import CIDiv from '../Components/CustomersImageDiv';
-import { SlideImage,customers,slide ,language} from '../Components/Data';
+import { SlideImage,customers,slide, language} from '../Components/Data';
 import {useState,useEffect} from 'react'
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 function Customers(){
@@ -65,31 +65,32 @@ return <Box>
 
       </Flex>
 
-    <Box w='70%' m='auto' mb='100px'>
+      <Box w='80%' m='auto' mt='50px' mb='50px'>
 
-     <Flex justifyContent='space-between' alignItems='center'>
+<div className='slider'>
 
-    <ArrowBackIcon  color='#f06' onClick={()=>handleIndex(-1)}/>
+ <div className='slider-track'>
+
+ {
+   language.map((ele)=>{
+     return <div className='slide'>
+
+<Tooltip label={ele.name} fontSize='md'>
+
+<img className='slide_img1' src={ele.img}/>
+
+</Tooltip>
+         
+     </div>
+   })
+ }
 
 
-        <Box >
-            <Flex justifyContent='space-between' gap='40px'>
-            {
-       arr.map((ele)=>{
-         return <Image w='80px' h='40px' src={ele} alt='image-ele' />
-       })
-       }
-            </Flex>
+ </div>
 
-        </Box>
-     
-    <ArrowForwardIcon color='#f06' onClick={()=>handleIndex(1)}/>
+</div>
 
-      
-
-     </Flex>
-
-    </Box>
+</Box>
 
 
     
@@ -107,6 +108,32 @@ return <Box>
   borderRadius='10px' />
   </Box>
       </Flex>
+
+
+     <Box w='80%' m='auto' mt='100px' mb='100px'>
+
+         <div className='slider'>
+
+          <div className='slider-track'>
+  
+          {
+            customers.map((ele)=>{
+              return <div className='slide'>
+                  
+                  <img className='slide_img' src={ele}/>
+
+              </div>
+            })
+          }
+
+
+          </div>
+
+         </div>
+
+     </Box>
+
+
       <Flex  w='70%' m='auto' gap='130px' justify='space-between' mb='150px' mt='100px' alignItems='center'>
       <Box>
   <Image
