@@ -4,7 +4,24 @@ import BrandsLogo from '../Components/BrandsLogo';
 import {ArrowForwardIcon} from '@chakra-ui/icons';
 import ResourceDiv from '../Components/ResourceDiv';
 import FooterLoginDiv from '../Components/FooterLoginDiv';
+import {useEffect} from 'react';
 function Home(){
+
+  useEffect(()=>{
+    document.title = 'Codecov - The Leading Code Coverage Solution';
+    let nav =  document.querySelector('nav')
+    let footer =  document.querySelector('footer')
+    let div =  document.querySelector('#slanted_div')
+    let ad =  document.querySelector('.ad')
+
+
+
+    nav.style.display = 'block'
+    footer.style.display = 'block'
+    div.style.display = 'block'
+    ad.style.display = 'block'
+  },[])
+
 return <Box fontFamily='"poppins",-apple-system,BlinkMacSystemFont,Roboto,"Arial",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol'>
 
        <Box>

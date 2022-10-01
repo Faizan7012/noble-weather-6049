@@ -206,3 +206,24 @@ export const customers=['https://www.freepnglogos.com/uploads/philips-logo-0.jpg
     'https://about.codecov.io/wp-content/uploads/2021/02/oyster-logo.svg',
     'https://about.codecov.io/wp-content/uploads/2021/02/ujet-logo.svg']
     ]
+
+
+    export const ImageData=[
+
+        ['https://about.codecov.io/wp-content/uploads/2021/06/butterfly_network-1.svg','https://about.codecov.io/wp-content/uploads/2021/06/Hewlett_Packard_Enterprise_logo.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/Nutrien_Logo.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/ppg.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/hitachi.svg'],
+        ['https://about.codecov.io/wp-content/uploads/2021/07/wework-logo.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/NTT-Data-Logo.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/thiememeulenhoff.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/ring-1.svg'],
+        ['https://about.codecov.io/wp-content/uploads/2021/06/truepill.svg','https://about.codecov.io/wp-content/uploads/2021/06/spothero-1.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/gatspy.svg','https://about.codecov.io/wp-content/uploads/2021/06/substack-1.svg',
+        'https://about.codecov.io/wp-content/uploads/2021/06/EquityZen-Logo-2.svg'
+     ],
+     ['https://about.codecov.io/wp-content/uploads/2021/06/mux.svg',
+      'https://about.codecov.io/wp-content/uploads/2021/02/healthsherpa-logo.png',
+     'https://about.codecov.io/wp-content/uploads/2021/02/oyster-logo.svg',
+     'https://about.codecov.io/wp-content/uploads/2021/02/ujet-logo.svg']
+    ]

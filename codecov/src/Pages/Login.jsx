@@ -4,7 +4,7 @@ import {Flex,Box,Heading,  FormControl,
     import {useState} from 'react';
     import { Navigate,} from 'react-router-dom';
     import { AuthContext } from '../Context/AuthContext';
-    import { useContext } from 'react';
+    import { useContext,useEffect } from 'react';
 
     const initialState = {
         name:'',
@@ -22,6 +22,26 @@ function Login(){
     const [info2,setInfo2] = useState(initialState2);
     const {isAuth,toggleAuth} = useContext(AuthContext);
     const [users,setUsers] = useState([])
+
+    useEffect(()=>{
+      document.title = 'Login - Codecov';
+      let body =  document.querySelector('body')
+      body.style.backgroundImage = 'none';
+      let nav =  document.querySelector('nav')
+      let footer =  document.querySelector('footer')
+      let div =  document.querySelector('#slanted_div')
+      let ad =  document.querySelector('.ad')
+
+
+
+      nav.style.display = 'none'
+      footer.style.display = 'none'
+      div.style.display = 'none'
+      ad.style.display = 'none'
+
+
+
+    },[])
 
 const handleInputChange = (e)=>{
     const {value,name} = e.target;
@@ -68,14 +88,14 @@ if(isAuth){
     return <Navigate to='/' />
 }
 
-return <Flex w='100%' mb='100px' textAlign='center'>
+return <Flex w='100%' mb='100px' h='100vh' position='absolute' top='0' textAlign='center'>
 
-        <Box w='50%'  >
-        <Heading fontSize='20px' color='#f06'>Login</Heading>
+        <Box w='50%' bg='#0f1b29' pt='100px'  >
+        <Heading fontSize='20px' color='white'>Login</Heading>
 
         <Box w='60%' p='10%' m='auto'  boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' mt='30px' borderRadius='10px'>
      <FormControl>
-         <FormLabel color='#f06'>Email</FormLabel>
+         <FormLabel color='white'>Email</FormLabel>
       <Input
         name='email'
         type='email'
@@ -84,9 +104,10 @@ return <Flex w='100%' mb='100px' textAlign='center'>
         mb='10px'
         border='2px'
         borderColor='#f06'
+        color='white'
 
       />
-        <FormLabel color='#f06'>Password</FormLabel>
+        <FormLabel color='white'>Password</FormLabel>
         <Input
         name='password'
         type='password'
@@ -95,6 +116,7 @@ return <Flex w='100%' mb='100px' textAlign='center'>
         mb='10px'
         border='2px'
         borderColor='#f06'
+        color='white'
 
       />
     </FormControl>
@@ -102,7 +124,7 @@ return <Flex w='100%' mb='100px' textAlign='center'>
     <Center><Button bg='#f06'  mt='30px' color='white' _hover={{bg:'#f06'}} onClick={(e)=>handleLogin(e)}>Login</Button></Center>
          </Box>
         </Box>
-        <Box w='50%'>
+        <Box w='50%' pt='60px'>
         <Heading fontSize='20px' color='#f06'>Sign Up</Heading>
          <Box w='60%' p='10%' m='auto'  boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' mt='30px' borderRadius='10px'>
      <FormControl>

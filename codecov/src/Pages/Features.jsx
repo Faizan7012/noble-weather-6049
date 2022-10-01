@@ -2,9 +2,22 @@ import FeaturesDiv from "../Components/FeaturesDiv";
 import FeaturesImage from "../Components/FeaturesImage";
 import {Flex,Box,Heading,Center} from '@chakra-ui/react';
 import FooterLoginDiv from "../Components/FooterLoginDiv";
-
+import {useEffect} from 'react'
 function Features(){
+  useEffect(()=>{
+    document.title = 'Features - Codecov';
+    let nav =  document.querySelector('nav')
+    let footer =  document.querySelector('footer')
+    let div =  document.querySelector('#slanted_div')
+    let ad =  document.querySelector('.ad')
 
+
+
+    nav.style.display = 'block'
+    footer.style.display = 'block'
+    div.style.display = 'block'
+    ad.style.display = 'block'
+  },[])
   return <Box>
             <Box mb='100px'>
                 <Center>
