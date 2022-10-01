@@ -3,7 +3,6 @@ import Navbar from './Components/Navbar';
 import AllRoutes from './Components/AllRoutes';
 import {Box,Text,Center} from '@chakra-ui/react';
 import Footer from './Components/Footer';
-
 function App() {
   return (
     <div className="App">

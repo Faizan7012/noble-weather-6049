@@ -1,27 +1,13 @@
-import {Flex,Box,Heading,  FormControl,
-    FormLabel,
-   Center,Button,Input} from '@chakra-ui/react';
-    import {useState} from 'react';
-    import { Navigate,} from 'react-router-dom';
+
+  import { Navigate,} from 'react-router-dom';
     import { AuthContext } from '../Context/AuthContext';
-    import { useContext,useEffect } from 'react';
-
-    const initialState = {
-        name:'',
-        email:'',
-        password:''
-    }
-
-    const initialState2 = {
-        email:'',
-        password:''
-    }
-
+    import {useEffect,useState,useContext} from 'react';
+    import {Flex,Box,Image,Heading,SimpleGrid} from '@chakra-ui/react'
+    import {customers} from '../Components/Data';
+    import {signInWithPopup,FacebookAuthProvider, GoogleAuthProvider, GithubAuthProvider} from 'firebase/auth'
+    import {authentication} from '../Components/firebase-config'
 function Login(){
-    const [info,setInfo] = useState(initialState);
-    const [info2,setInfo2] = useState(initialState2);
     const {isAuth,toggleAuth} = useContext(AuthContext);
-    const [users,setUsers] = useState([])
 
     useEffect(()=>{
       document.title = 'Login - Codecov';
@@ -43,131 +29,112 @@ function Login(){
 
     },[])
 
-const handleInputChange = (e)=>{
-    const {value,name} = e.target;
-    setInfo({...info,[name]:value});
+    function signIn(){
+      const provider = new FacebookAuthProvider();
+       signInWithPopup(authentication,provider)
+       .then((res)=>{
+          toggleAuth()
+       })
+       .catch((err)=>{
+        alert('try again')
+       })
+     }
+     function signIn2(){
+       const provider = new GoogleAuthProvider();
+        signInWithPopup(authentication,provider)
+        .then((res)=>{
+          toggleAuth()
+        })
+        .catch((err)=>{
+          alert('try again')
+        })
+      }
+      function signIn3(){
+        const provider = new GithubAuthProvider();
+         signInWithPopup(authentication,provider)
+         .then((res)=>{
+           toggleAuth()
+         })
+         .catch((err)=>{
+           alert('try again')
+         })
+       }
 
-}
-
-const handleInputChange2 = (e)=>{
-    const {value,name} = e.target;
-    setInfo2({...info2,[name]:value});
-}
-
-const handleAdd = (e)=>{
-   e.preventDefault();
- 
-   if(info.name=='' || info.email=='' || info.password==''){
-    alert('All Input Feild is Required')
-   }
-   else{
-    alert('Sign Up Successfull')
-    setUsers([...users,info]);
-    setInfo(initialState)
-   }
-
-}
-
-const handleLogin = (e)=>{
- e.preventDefault();
-    let ans = false;
-    for(let i=0;i<users.length;i++){
-        let ele = users[i];
-        if(info2.email==ele.email && info2.password==ele.password){
-            ans = true;
-            break;
-        }
-    }
-
-
-    ans?toggleAuth():alert('Wrong Details');
-
-}
 
 if(isAuth){
-    return <Navigate to='/' />
+    return <Navigate to='/pricing' />
 }
 
-return <Flex w='100%' mb='100px' h='100vh' position='absolute' top='0' textAlign='center'>
+ return <Flex h='100vh'>
 
-        <Box w='50%' bg='#0f1b29' pt='100px'  >
-        <Heading fontSize='20px' color='white'>Login</Heading>
+ <Box h='100vh' w='50%' bg='#0f1b29' p='20px 60px'>
 
-        <Box w='60%' p='10%' m='auto'  boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' mt='30px' borderRadius='10px'>
-     <FormControl>
-         <FormLabel color='white'>Email</FormLabel>
-      <Input
-        name='email'
-        type='email'
-        value={info2.email}
-        onChange={handleInputChange2}
-        mb='10px'
-        border='2px'
-        borderColor='#f06'
-        color='white'
+ <Image maxW='200px' src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/logos/codecov.svg'/>
+ <Box mt='100px' p='20px' color='white' pr='100px' ml='50px'>
+    <Heading fontSize='30px'>Get In Touch.</Heading>
+    <Heading mb='20px' mt='30px' fontSize='15px' fontFamily='"poppins","Roboto","Arial",Arial,sans-serif' lineHeight='1.6rem'>
+    Fill in the form to the right to get in touch with someone on our team, and we will reach out shortly.
+    </Heading>
+    <Heading mb='30px' fontSize='15px' fontFamily='"poppins","Roboto","Arial",Arial,sans-serif' lineHeight='1.6rem'>
+    If you are seeking support please visit our <span className='span'>support portal</span> before reaching out directly.
+    </Heading>
+ </Box>
 
-      />
-        <FormLabel color='white'>Password</FormLabel>
-        <Input
-        name='password'
-        type='password'
-        value={info2.password}
-        onChange={handleInputChange2}
-        mb='10px'
-        border='2px'
-        borderColor='#f06'
-        color='white'
+ <Box w='80%' m='auto' mt='-30px'>
 
-      />
-    </FormControl>
+      <div className='slider'>
 
-    <Center><Button bg='#f06'  mt='30px' color='white' _hover={{bg:'#f06'}} onClick={(e)=>handleLogin(e)}>Login</Button></Center>
-         </Box>
-        </Box>
-        <Box w='50%' pt='60px'>
-        <Heading fontSize='20px' color='#f06'>Sign Up</Heading>
-         <Box w='60%' p='10%' m='auto'  boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' mt='30px' borderRadius='10px'>
-     <FormControl>
-      <FormLabel color='#f06'>Name</FormLabel>
-      <Input
-        name='name'
-        type='text'
-        value={info.name}
-        onChange={handleInputChange}
-        mb='10px'
-        border='2px'
-        borderColor='#f06'
-      />
-         <FormLabel color='#f06'>Email</FormLabel>
-      <Input
-        name='email'
-        type='email'
-        value={info.email}
-        onChange={handleInputChange}
-        mb='10px'
-        border='2px'
-        borderColor='#f06'
+       <div className='slider-track'>
 
-      />
-        <FormLabel color='#f06'>Password</FormLabel>
-        <Input
-        name='password'
-        type='password'
-        value={info.password}
-        onChange={handleInputChange}
-        mb='10px'
-        border='2px'
-        borderColor='#f06'
+       {
+         customers.map((ele)=>{
+           return <div className='slide'>
+               
+               <img className='slide_img3' src={ele}/>
 
-      />
-    </FormControl>
+           </div>
+         })
+       }
 
-    <Center><Button bg='#f06'  mt='30px' color='white' _hover={{bg:'#f06'}} onClick={(e)=>handleAdd(e)}>Sign Up</Button></Center>
-         </Box>
-        </Box>
-         
-       </Flex>
+
+       </div>
+
+      </div>
+
+  </Box>
+ </Box>
+ <Box h='100vh' w='50%'>
+
+      <Box>
+      <SimpleGrid w='60%' m='auto' mt='200px' columns='1' spacing='10px'>
+    <Flex onClick={signIn3} border='1px solid #e3e3e3' justifyContent='space-around' alignItems='center' _hover={{border:'1px solid gray'}} p='15px 40px' borderRadius='10px'>
+      <Image maxW='20px' src='https://about.codecov.io/wp-content/themes/codecov/assets/logos/ci/github/github-icon.svg' />
+      <Heading fontSize='16px'>
+      Login With Github
+
+      </Heading>
+    </Flex>
+    <Flex onClick={signIn2} border='1px solid #e3e3e3' justifyContent='space-around' alignItems='center' _hover={{border:'1px solid gray'}} p='15px 40px' borderRadius='10px'>
+      <Image maxW='20px' src='https://img.icons8.com/color/2x/google-logo.png' />
+      <Heading fontSize='16px' >
+      Login With Google
+
+      </Heading>
+    </Flex>
+    <Flex onClick={signIn} border='1px solid #e3e3e3' justifyContent='space-around' alignItems='center' _hover={{border:'1px solid gray'}} p='15px 40px' borderRadius='10px'>
+      <Image maxW='20px' src='https://img.icons8.com/color/2x/facebook-new.png' />
+      <Heading fontSize='16px' >
+      Login With Facebook
+      </Heading>
+    </Flex>
+   </SimpleGrid>
+
+      </Box>
+
+
+ </Box>
+</Flex>
+
 
 }
-
 export default Login;
