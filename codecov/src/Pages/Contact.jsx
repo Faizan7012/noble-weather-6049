@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 import {Flex,Box,Image,Heading,Input,FormControl,FormLabel,Button,Grid,Select, GridItem, Textarea} from '@chakra-ui/react'
-import {ImageData} from '../Components/Data';
+import {customers} from '../Components/Data';
 
 const initialState = {
 
@@ -14,9 +14,6 @@ const initialState = {
 }
 
 function Contact(){
-const [index,setIndex] = useState(0)
-let arr = ImageData[index]
-
 const [reply,setReply] = useState(initialState);
 
     useEffect(()=>{
@@ -53,23 +50,13 @@ const [reply,setReply] = useState(initialState);
       }
 
 
-    //   setInterval(()=>{
-    //     if(index===3){
-    //        setIndex(0)
-    //     }
-    //     else{
-    //       setIndex(index+1)
-    //     }
-    //   },3000)
-
-
 
 return <Flex h='100vh'>
 
     <Box h='100vh' w='50%' bg='#0f1b29' p='20px 60px'>
 
     <Image maxW='200px' src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/logos/codecov.svg'/>
-    <Box mt='100px' p='20px' color='white' pr='100px' mb='60px' ml='50px'>
+    <Box mt='100px' p='20px' color='white' pr='100px' ml='50px'>
        <Heading fontSize='30px'>Get In Touch.</Heading>
        <Heading mb='20px' mt='30px' fontSize='15px' fontFamily='"poppins","Roboto","Arial",Arial,sans-serif' lineHeight='1.6rem'>
        Fill in the form to the right to get in touch with someone on our team, and we will reach out shortly.
@@ -79,20 +66,28 @@ return <Flex h='100vh'>
        </Heading>
     </Box>
 
-    <Box>
+    <Box w='80%' m='auto' mt='-30px'>
 
-      <Flex justifyContent='space-between' p='10px 80px'>
+         <div className='slider'>
 
-       {
-        arr.map((ele)=>{
-            return <Image filter='grayscale(1)' maxW='70px' maxH='30px' src={ele} />
-        })
-       }
+          <div className='slider-track'>
+  
+          {
+            customers.map((ele)=>{
+              return <div className='slide'>
+                  
+                  <img className='slide_img3' src={ele}/>
 
-      </Flex>
+              </div>
+            })
+          }
 
-    </Box>
 
+          </div>
+
+         </div>
+
+     </Box>
     </Box>
     <Box h='100vh' w='50%'>
 
