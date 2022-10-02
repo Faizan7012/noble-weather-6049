@@ -42,7 +42,7 @@ const Navbar = ()=>{
    <Link to='/customers'>
     <Button border='none' bg='none'>Customers</Button>
    </Link>
-   <Link to='/recources'>
+   <Link to='/resources'>
    <Button border='none' bg='none'>Recources</Button>
    </Link>
    <Link to='/pricing'>
@@ -54,7 +54,7 @@ const Navbar = ()=>{
    <Link to='/login'>
     {
       isAuth?<Button bg='black' color='#fff' _hover={{bg:'black'}} onClick={handleLogout}>Logout</Button>:
-   <Button border='none' bg='none'>Login</Button>
+   <Button bg='black' color='#fff' _hover={{bg:'black'}}>Login</Button>
     }
    </Link>
   </ButtonGroup>

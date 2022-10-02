@@ -7,6 +7,8 @@ import Integration from "../Pages/Integration";
 import Customers from "../Pages/Customers";
 import Pricing from "../Pages/Pricing";
 import Contact from "../Pages/Contact";
+import Resource from "../Pages/Resource";
+import NotFound from "../Pages/NotFound";
 
 function AllRoutes() {
     return (
@@ -17,7 +19,9 @@ function AllRoutes() {
         <Route path='/customers' element={<PrivateRoute><Customers /></PrivateRoute>}></Route>
         <Route path='/pricing' element={<PrivateRoute><Pricing /></PrivateRoute>}></Route>
         <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/resources' element={<PrivateRoute><Resource /></PrivateRoute>}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/*'  element={<NotFound />}></Route>
       </Routes>
     );
   }

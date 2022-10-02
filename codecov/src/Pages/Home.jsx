@@ -13,8 +13,7 @@ function Home(){
     let footer =  document.querySelector('footer')
     let div =  document.querySelector('#slanted_div')
     let ad =  document.querySelector('.ad')
-
-
+    document.body.style.backgroundImage='url("https://about.codecov.io/wp-content/themes/codecov/assets/backgrounds/bg-blobs-02.svg")';
 
     nav.style.display = 'block'
     footer.style.display = 'block'

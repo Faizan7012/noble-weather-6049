@@ -3,7 +3,7 @@ import React from "react";
 export const AuthContext = React.createContext();
 
 function AuthContextProvider({ children }) {
-  const [isAuth, setAuth] = React.useState(false);
+  const [isAuth, setAuth] = React.useState(true);
 
   function toggleAuth() {
     setAuth(!isAuth);

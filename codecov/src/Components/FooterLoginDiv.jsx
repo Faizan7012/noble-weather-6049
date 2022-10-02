@@ -3,12 +3,12 @@ import {signInWithPopup,FacebookAuthProvider, GoogleAuthProvider,GithubAuthProvi
 import {authentication} from './firebase-config'
 import { AuthContext } from '../Context/AuthContext';
 import { useContext} from 'react';
-import {Navigate} from 'react-router-dom'
 
 function FooterLoginDiv(){
   const {isAuth,toggleAuth} = useContext(AuthContext);
   function signIn(){
     const provider = new FacebookAuthProvider();
+    isAuth?alert('You Have Already Logged In'):
      signInWithPopup(authentication,provider)
      .then((res)=>{
         toggleAuth()
@@ -19,6 +19,7 @@ function FooterLoginDiv(){
    }
    function signIn2(){
      const provider = new GoogleAuthProvider();
+    isAuth?alert('You Have Already Logged In'):
       signInWithPopup(authentication,provider)
       .then((res)=>{
         toggleAuth()
@@ -30,6 +31,7 @@ function FooterLoginDiv(){
 
     function signIn3(){
       const provider = new GithubAuthProvider();
+    isAuth?alert('You Have Already Logged In'):
        signInWithPopup(authentication,provider)
        .then((res)=>{
          toggleAuth()
@@ -41,7 +43,7 @@ function FooterLoginDiv(){
 
 
 return   <Center mb='100px'>
-<Box w='60%' p='10px 30px' pb='20px' borderRadius='10px' boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
+<Box w='50%' p='10px 30px' pb='20px' borderRadius='10px' boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
   <Box>
     <Center>
     <Heading mt='30px' fontSize='30px'>Ready to get covered?</Heading>
