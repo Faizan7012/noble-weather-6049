@@ -14,6 +14,7 @@ function Pricing(){
          let footer =  document.querySelector('footer')
          let div =  document.querySelector('#slanted_div')
          let ad =  document.querySelector('.ad')
+         document.body.style.backgroundImage='none'
    
    
    

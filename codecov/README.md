@@ -71,166 +71,333 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-let language = [
+"data" = [
 
-   {name:'Elixir',img:'https://about.codecov.io/wp-content/uploads/2020/08/elixir-icon.svg'},
-   {name:'Rust',img:'https://about.codecov.io/wp-content/uploads/2020/08/rust-icon.svg'},
-   {name:'C#',img:'https://about.codecov.io/wp-content/uploads/2020/08/c-sharp-icon.svg'},
-   {name:'Fortran',img:'https://about.codecov.io/wp-content/uploads/2020/08/fortran-icon.svg'},
-   {name:'Haskell',img:'https://about.codecov.io/wp-content/uploads/2020/08/haskell-icon.svg'},
-   {name:'JavaScript',img:'https://about.codecov.io/wp-content/uploads/2020/08/javascript-js-seeklogo.com_.svg'},
-   {name:'PHP',img:'https://about.codecov.io/wp-content/uploads/2020/08/php-logo.svg'},
-   {name:'Python',img:'https://about.codecov.io/wp-content/uploads/2020/08/python-icon.svg'},
-   {name:'R',img:'https://about.codecov.io/wp-content/uploads/2020/08/r-icon.svg'},
-   {name:'Vala',img:'https://about.codecov.io/wp-content/uploads/2020/08/vala-logo.svg'},
-   {name:'C',img:'https://about.codecov.io/wp-content/uploads/2020/08/c-icon.svg'},
-   {name:'D',img:'https://about.codecov.io/wp-content/uploads/2020/08/d-icon.svg'},
-   {name:'Go',img:'https://about.codecov.io/wp-content/uploads/2020/08/go-icon.svg'},
-   {name:'Ruby',img:'https://about.codecov.io/wp-content/uploads/2020/08/ruby-icon.svg'},
-   {name:'Scala',img:'https://about.codecov.io/wp-content/uploads/2020/08/scala-icon.svg'},
-   {name:'Groovy',img:'https://about.codecov.io/wp-content/uploads/2020/11/groovy-icon.svg'},
-   {name:'Xtend',img:'https://about.codecov.io/wp-content/uploads/2020/11/xtend-icon.png'},
-   {name:'Bash',img:'https://about.codecov.io/wp-content/uploads/2020/08/bash-icon.svg'},
-   {name:'C++',img:'https://about.codecov.io/wp-content/uploads/2020/08/c-plus-plus-icon.svg'},
-   {name:'F#',img:'https://about.codecov.io/wp-content/uploads/2020/08/f-sharp-icon.svg'},
-   {name:'Typescript',img:'https://about.codecov.io/wp-content/uploads/2020/08/typescript-icon.svg'},
-   {name:'Xcode',img:'https://about.codecov.io/wp-content/uploads/2020/08/xcode-icon.svg'},
-   {name:'Swift',img:'https://about.codecov.io/wp-content/uploads/2020/11/swift-icon.svg'},
-   {name:'Objective-C',img:'https://about.codecov.io/wp-content/uploads/2020/11/objective-c-logo.png'},
-   {name:'Kotlin',img:'https://about.codecov.io/wp-content/uploads/2020/11/kotlin-icon.svg'},
-   {name:'Powershell',img:'https://about.codecov.io/wp-content/uploads/2021/01/powershell-icon.png'},
-   {name:'Closure',img:'https://about.codecov.io/wp-content/uploads/2020/08/clojure-icon.svg'},
-   {name:'Dart',img:'https://about.codecov.io/wp-content/uploads/2020/08/dart-icon.svg'},
-   {name:'Erlang',img:'https://about.codecov.io/wp-content/uploads/2020/08/erlang-icon.svg'},
-   {name:'Java',img:'https://about.codecov.io/wp-content/uploads/2020/08/java-icon.svg'},
-   {name:'Julia',img:'https://about.codecov.io/wp-content/uploads/2020/08/julia-icon.svg'},
-   {name:'Lua',img:'https://about.codecov.io/wp-content/uploads/2020/08/lua-icon.svg'},
-   {name:'Perl',img:'https://about.codecov.io/wp-content/uploads/2020/08/perl-icon.svg'},
-   {name:'Apex',img:'https://about.codecov.io/wp-content/uploads/2020/11/apex-icon.png'},
-]
+     {
+     id:'1',
+     title:'Designing Asynchronous Microservices With AsyncAPI',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Designing-Asynchronous-Microservices-With-AsyncAPI-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Vyom-100x100.jpeg',
+     author:'Vyom Srivastava',
+     date:'September 29, 2022',
+     month:'September',
+     forw:'Learn More',
+     link:'https://nordicapis.com/designing-asynchronous-microservices-with-asyncapi/'
+     },
+      {
+         id:'2',
+     title:'Proactive Tips to Avoid Shadow APIs',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Proactive-Tips-to-Avoid-Shadow-APIs-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/kristopher_2-96x96.jpg',
+     author:'Kristopher Sandoval',
+     date:'September 28, 2022',
+     month:'September',
+     forw:'Learn More',
+     link:'https://nordicapis.com/proactive-tips-to-avoid-shadow-apis/'
+     }, 
+       {
+     id:'3',
+     title:'How to Set SLAs for Cloud APIs',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/How-to-Set-SLAs-for-Cloud-APIs-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/J-SIMPSON-125x125.jpg',
+     author:'J Simpson',
+     date:'September 27, 2022',
+          month:'September',
+     forw:'Learn More',
+     link:'https://nordicapis.com/how-to-set-slas-for-cloud-apis/'
+     },
+        {
+         id:'4',
+     title:'Cisco SD-WAN API: Building Networks as Code',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Cisco-SD-WAN-API-Building-Networks-as-Code-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/GiladMaayan-100x100.png',
+     author:'Gilad David Maayan',
+     date:'September 22, 2022',
+     month:'September',
+     forw:'Learn More',
+     link:'https://nordicapis.com/cisco-sd-wan-api-building-networks-as-code/'
+     },
+        {
+         id:'5',
+     title:'4 Top Challenges With API Development and How To Overcome Them',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/The-Top-4-Challenges-With-API-Development-and-How-To-Overcome-Them-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Nahla-Davies-headshot-100x100.jpeg',
+     author:'Nahla Davies',
+     date:'August 24, 2022',
+     month:'August',
+     forw:'Learn More',
+     link:'https://nordicapis.com/4-top-challenges-with-api-development-and-how-to-overcome-them/'
+     },
+        {
+         id:'6',
 
+     title:'10+ Payment APIs to Make Transactions Easier',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/10-Payment-APIs-to-Make-Transactions-Easier-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Vyom-100x100.jpeg',
+     author:'Vyom Srivastava',
+     date:'September 21, 2022',
+     month:'September',
+     forw:'Learn More',
+     link:'https://nordicapis.com/10-payment-apis/'
+     },
+        {
+         id:'7',
+     title:'What Is Developer Experience?',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/What-is-Developer-Experience-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Profile-shot-recent-100x100.jpg',
+     author:'Bill Doerrfeld',
+     date:'August 31, 2022',
+     month:'August',
+     forw:'Learn More',
+     link:'https://nordicapis.com/what-is-developer-experience/'
+     },
+        {
+         id:'8',
+     title:'10 Powerful AI/ML APIs',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/10-Powerful-AI-ML-APIs-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Vyom-100x100.jpeg',
+     author:'Vyom Srivastava',
+     date:'August 21, 2022',
+     month:'August',
+     forw:'Learn More',
+     link:'https://nordicapis.com/10-powerful-ai-ml-apis/'
+     },
+        {
+         id:'9',
+     title:'The Risks of Zombie APIs (and What to Do About Them)',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.comwp-contentuploadsThe-Risks-of-Zombie-APIs-and-What-to-Do-About-Them-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/J-SIMPSON-125x125.jpg',
+     author:'J Simpson',
+     date:'August 30, 2022',
+     month:'August',
+     forw:'Learn More',
+     link:'https://nordicapis.com/the-risks-of-zombie-apis-and-what-to-do-about-them/'
+     },
+        {
+         id:'10',
+     title:'Understanding Microsoft Graph Security API: The Gateway to Microsoft’s Security Universe',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Understanding-Microsoft-Graph-Security-API-The-Gateway-to-Microsofts-Security-Universe-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/GiladMaayan-100x100.png',
+     author:'Gilad David Maayan',
+     date:'August 25, 2022',
+     month:'August',
+     forw:'Learn More',
+     link:'https://nordicapis.com/understanding-microsoft-graph-security-api-the-gateway-to-microsofts-security-universe/'
+     },
+        {
+         id:'11',
 
+     title:'4 Examples of RESTful API Pagination in Production',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/4-Examples-of-RESTful-API-Pagination-in-Production-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/kristopher_2-96x96.jpg',
+     author:'Kristopher Sandoval',
+     date:'August 23, 2022',
+     month:'August',
+     forw:'Learn More',
+     link:'https://nordicapis.com/4-examples-of-restful-api-pagination-in-production/'
+     },
+        {
+         id:'12',
 
-let hosts =[
+     title:'Exploring the Align-Define-Design-Refine (ADDR) Process',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Exploring-the-Align-Define-Design-Refine-ADDR-Process-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/J-SIMPSON-125x125.jpg',
+     author:'J Simpson',
+     date:'August 16, 2022',
+     month:'August',
+     forw:'Learn More',
+     link:'https://nordicapis.com/exploring-the-align-define-design-refine-addr-process/'
+     },
+        {
+         id:'13',
 
-   {name:'Bitbucket',img='https://about.codecov.io/wp-content/uploads/2020/08/bitbucket-icon.svg'},
-   {name:'Bitbucket Server',img='https://about.codecov.io/wp-content/uploads/2020/08/bitbucket-icon.svg'},
-   {name:'GitLab',img='https://about.codecov.io/wp-content/uploads/2020/08/gitlab-icon.svg'},
-   {name:'GitHub Enterprise',img='https://about.codecov.io/wp-content/uploads/2020/09/gitub-icon.svg'},
-   {name:'GitLab CE / EE',img='https://about.codecov.io/wp-content/uploads/2020/08/gitlab-icon.svg'},
-   {name:'GitHub',img='https://about.codecov.io/wp-content/uploads/2020/09/gitub-icon.svg'},
+     title:'API Security is Paramount to Protect the Software Supply Chain',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/API-Security-is-Paramount-to-Protect-the-Software-Supply-Chain-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/kristopher_2-96x96.jpg',
+     author:'Kristopher Sandoval',
+     date:'July 27, 2022',
+     month:'July',
+     forw:'Learn More',
+     link:'https://nordicapis.com/api-security-is-paramount-to-protect-the-software-supply-chain/'
+     },
+        {
+         id:'14',
 
+     title:'10 Real-Time Stock Data APIs',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/10-Stock-Data-APIs-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Vyom-100x100.jpeg',
+     author:'Vyom Srivastava',
+     date:'July 26, 2022',
+     month:'July',
+     forw:'Learn More',
+     link:'https://nordicapis.com/10-real-time-stock-data-apis/'
+     },
+        {
+         id:'15',
+     title:'How to Autogenerate GraphQL API Documentation',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Untitled-3-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/J-SIMPSON-125x125.jpg',
+     author:'J Simpson',
+     date:'July 21, 2022',
+     month:'July',
+     forw:'Learn More',
+     link:'https://nordicapis.com/how-to-autogenerate-graphql-api-documentation/'
+     },
+        {
+         id:'16',
 
-]
+     title:'How Banking-as-a-Service Is Accelerated Through APIs',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/How-Banking-as-a-Service-Is-Accelerated-Through-APIs-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/art-anthony-nordic-apis-contributor-96x96.png',
+     author:'Art Anthony',
+     date:'July 19, 2022',
+     month:'July',
+     forw:'Learn More',
+     link:'https://nordicapis.com/how-banking-as-a-service-is-accelerated-through-apis/'
+     },
+        {
+         id:'17',
+     title:'The Benefits of Using API Specifications',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/The-Benefits-of-Using-API-Specifications-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Frank-Kilcommins-2500x2300-1-125x125.jpeg',
+     author:'Frank Kilcommins',
+     date:'July 14, 2022',
+     month:'July',
+     forw:'Learn More',
+     link:'https://nordicapis.com/the-benefits-of-using-api-specifications/'
+     },
+        {
+         id:'18',
+     title:'What Is Messaging and What Do I Get out of It?',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/What-Is-Messaging-and-What-Do-I-Get-out-of-It-1-1-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/adrian-moto-100x100.jpg',
+     author:'Adriano Mota',
+     date:'July 7, 2022',
+     month:'July',
+     forw:'Learn More',
+     link:'https://nordicapis.com/what-is-messaging-and-what-do-i-get-out-of-it/'
+     },
+        {
+         id:'19',
+     title:'Quality DX and Security Required to Standardize Open Banking',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Quality-DX-and-Security-Required-to-Standardize-Open-Banking-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Profile-shot-recent-100x100.jpg',
+     author:'Bill Doerrfeld',
+     date:'June 29, 2022',
+     month:'June',
+     forw:'Learn More',
+     link:'https://nordicapis.com/quality-dx-and-security-required-to-standardize-open-banking/'
+     },
+        {
+         id:'20',
 
-
-
- let ci = [
-   {name:'Buildbot',img:'https://about.codecov.io/wp-content/uploads/2020/08/buildbot-icon.svg'},
-   {name:'GitLab CI',img:'https://about.codecov.io/wp-content/uploads/2020/08/gitlab-icon.svg'},
-   {name:'Jenkins',img:'https://about.codecov.io/wp-content/uploads/2020/08/jenkins-icon.svg'},
-   {name:'Drone',img:'https://about.codecov.io/wp-content/uploads/2020/08/drone-icon.svg'},
-   {name:'Shippable',img:'https://about.codecov.io/wp-content/uploads/2020/08/shippable-icon.svg'},
-   {name:'Travis CI',img:'https://about.codecov.io/wp-content/uploads/2020/08/travis-ci-icon.svg'},
-   {name:'AppVeyor',img:'https://about.codecov.io/wp-content/uploads/2020/08/appveyor-icon.svg'},
-   {name:'Azure Pipelines',img:'https://about.codecov.io/wp-content/uploads/2020/08/azure-icon.svg'},
-   {name:'Bamboo',img:'https://about.codecov.io/wp-content/uploads/2020/08/bamboo-icon.svg'},
-   {name:'Bitrise',img:'https://about.codecov.io/wp-content/uploads/2020/08/bitrise-icon.svg'},
-   {name:'CircleCI',img:'https://about.codecov.io/wp-content/uploads/2020/08/circle-ci-icon.svg'},
-   {name:'GitHub Actions',img:'https://about.codecov.io/wp-content/uploads/2020/08/gitub-icon.svg'},
-   {name:'Wercker',img:'https://about.codecov.io/wp-content/uploads/2020/08/wercker-icon.svg'},
-   {name:'Bitbucket Pipelines',img:'https://about.codecov.io/wp-content/uploads/2020/08/bitbucket-icon.svg'},
-   {name:'Codefresh',img:'https://about.codecov.io/wp-content/uploads/2020/08/codefresh-icon.svg'},
-   {name:'Semaphore',img:'https://about.codecov.io/wp-content/uploads/2020/08/semaphore-icon.svg'},
-   {name:'Buildkite',img:'https://about.codecov.io/wp-content/uploads/2020/08/buildkite-icon.svg'},
-   {name:'TeamCity CI',img:'https://about.codecov.io/wp-content/uploads/2020/08/teamcity-icon.svg'},
-
- ]
-
-
- let cp = [
-   {name:'Microsoft Azure',img:'https://about.codecov.io/wp-content/uploads/2020/11/microsoft-azure-icon-1.svg'},
-   {name:'Google Cloud Platform',img:'https://about.codecov.io/wp-content/uploads/2020/11/google-cloud-platform-icon-1.svg'},
-   {name:'Amazon Web Services',img:'https://about.codecov.io/wp-content/uploads/2020/11/amazon-web-services-icon-1.svg'},
-
-]
-
-
-
-
-let CTool=[
-   {name:'Slather',img:'https://about.codecov.io/wp-content/uploads/2020/11/slather-icon.jpg'},
-   {name:'llvm',img:'https://about.codecov.io/wp-content/uploads/2020/11/llvm-logo.png'},
-   {name:'JaCoCo',img:'https://about.codecov.io/wp-content/uploads/2020/11/jacoco-icon.png'},
-   {name:'scoverage',img:'https://about.codecov.io/wp-content/uploads/2020/11/scoverage-licon.png'},
-   {name:'NCover',img:'https://about.codecov.io/wp-content/uploads/2021/07/ncover-icon.svg'},
-   {name:'dotCover',img:'https://about.codecov.io/wp-content/uploads/2021/07/dcicon.svg'},
-   {name:'OpenClover',img:'https://about.codecov.io/wp-content/uploads/2021/07/openclovericon.svg'},
-   {name:'XDebug',img:'https://about.codecov.io/wp-content/uploads/2020/11/xdebug-icon.svg'},
-   {name:'Coverage.py',img:'https://about.codecov.io/wp-content/uploads/2020/11/coveragepy-icon.png'},
-   {name:'pytest-cov',img:'https://about.codecov.io/wp-content/uploads/2020/11/pytest-icon.svg'},
-   {name:'gcov',img:'https://about.codecov.io/wp-content/uploads/2020/11/gcovicon.svg'},
-   {name:'Devel::Cover',img:'https://about.codecov.io/wp-content/uploads/2021/07/develcover-icon.svg'},
-   {name:'test_coverage',img:'https://about.codecov.io/wp-content/uploads/2021/07/test_coverage.svg'},
-   {name:'coverage',img:'https://about.codecov.io/wp-content/uploads/2021/07/coverageicon.svg'},
-   {name:'Bullseye',img:'https://about.codecov.io/wp-content/uploads/2022/01/llseye-icon.png'},
-   {name:'pcov',img:'https://about.codecov.io/wp-content/uploads/2020/11/pcov-icon.svg'},
-   {name:'SimpleCov',img:'https://about.codecov.io/wp-content/uploads/2020/11/simplecov-licon.png'},
-   {name:'Covertura',img:'https://about.codecov.io/wp-content/uploads/2020/11/cobertura-icon.svg'},
-   {name:'Coverlet',img:'https://about.codecov.io/wp-content/uploads/2021/07/coverlet-icon.svg'},
-   {name:'Testwell CTC++',img:'https://about.codecov.io/wp-content/uploads/2021/07/testwellicon.svg'},
-   {name:'LuaCov',img:'https://about.codecov.io/wp-content/uploads/2021/07/luacov.svg'},
-   {name:'Tarpaulin',img:'https://about.codecov.io/wp-content/uploads/2021/07/tarrpaylin.svg'},
-   {name:'Grcov',img:'https://about.codecov.io/wp-content/uploads/2021/07/grcovicon.svg'},
-   {name:'Kcov',img:'https://about.codecov.io/wp-content/uploads/2020/11/kcov-icon.svg'},
-   {name:'Parasoft Jtest',img:'https://about.codecov.io/wp-content/uploads/2021/07/parasoft.svg'},
-   {name:'Coco',img:'https://about.codecov.io/wp-content/uploads/2021/07/coco-icon.svg'},
-   {name:'Cloverage',img:'https://about.codecov.io/wp-content/uploads/2021/07/cloverageicon.svg'},
-   {name:'Bach',img:'https://about.codecov.io/wp-content/uploads/2021/07/bachicon.svg'},
-]
-
-
-
-let ts = [
-
-   {name:'PHPUnit',img:'https://about.codecov.io/wp-content/uploads/2020/11/phpunit-icon.svg'},
-   {name:'JUnit',img:'https://about.codecov.io/wp-content/uploads/2020/11/junit-icon.svg'},
-   {name:'pytest',img:'https://about.codecov.io/wp-content/uploads/2020/11/pytest-icon.svg'},
-   {name:'Cypress',img:'https://about.codecov.io/wp-content/uploads/2021/01/cypress.svg'},
-   {name:'UnitTest',img:'https://about.codecov.io/wp-content/uploads/2020/08/d-icon.svg'},
-   {name:'TestNG',img:'https://about.codecov.io/wp-content/uploads/2021/07/testng-icon.svg'},
-   {name:'SimpleTest',img:'https://about.codecov.io/wp-content/uploads/2020/11/simpletest-icon.jpg'},
-   {name:'ScalaTest',img:'https://about.codecov.io/wp-content/uploads/2020/11/scalatest-icon.png'},
-   {name:'Xcode',img:'https://about.codecov.io/wp-content/uploads/2021/02/xcode-icon.svg'},
-   {name:'XCTest',img:'https://about.codecov.io/wp-content/uploads/2020/11/xctest-icon.png'},
-   {name:'RSpec Rails',img:'https://about.codecov.io/wp-content/uploads/2020/11/rspec-rails-icon.png'},
-   {name:'CUnit',img:'https://about.codecov.io/wp-content/uploads/2021/07/cunit-icon.png'},
-   {name:'HUnit',img:'https://about.codecov.io/wp-content/uploads/2021/07/hunit-1.png'},
-   {name:'JEST',img:'https://about.codecov.io/wp-content/uploads/2021/07/jest.svg'},
-   {name:'Peter',img:'https://about.codecov.io/wp-content/uploads/2021/01/pester-logo.svg'},
-
-]
-
-
-let Uploaders = [
-   {name:'Node Uploader',img:'https://about.codecov.io/wp-content/uploads/2020/08/nodejs-icon.svg'},
-   {name:'Python Uploader',img:'https://about.codecov.io/wp-content/uploads/2020/08/python-icon.svg'},
-   {name:'Bash Uploader',img:'https://about.codecov.io/wp-content/uploads/2020/08/bash-icon.svg'},
-   {name:'Ruby Uploader',img:'https://about.codecov.io/wp-content/uploads/2020/08/ruby-icon.svg'},
-   {name:'Dart Uploader',img:'https://about.codecov.io/wp-content/uploads/2020/08/dart-icon.svg'},
-   {name:'Haskell Uploader',img:'https://about.codecov.io/wp-content/uploads/2020/08/haskell-icon.svg'},
-
-]
-
-
-
-let ChatIn = [
-   {name:'Slack',img:'https://about.codecov.io/wp-content/uploads/2020/08/slack-icon.svg'},
-   {name:'IRC',img:'https://about.codecov.io/wp-content/uploads/2020/08/irc.png'},
-   {name:'Gitter',img:'https://about.codecov.io/wp-content/uploads/2020/08/gitter-icon.svg'},
-
-]
-
-
-
-
+     title:'What Does It Mean To Be API-First?',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/What-Does-It-Mean-To-Be-API-First--750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/kristopher_2-96x96.jpg',
+     author:'Kristopher Sandoval',
+     date:'June 28, 2022',
+     month:'June',
+     forw:'Learn More',
+     link:'https://nordicapis.com/what-does-it-mean-to-be-api-first/'
+     },
+        {
+         id:'21',
+     title:'Using Backstage to Generate Developer Portals',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Using-Backstage-to-Generate-Developer-Portals-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Vyom-100x100.jpeg',
+     author:'Vyom Srivastava',
+     date:'June 23, 2022',
+     month:'June',
+     forw:'Learn More',
+     link:'https://nordicapis.com/using-backstage-to-generate-developer-portals/'
+     },
+        {
+         id:'22',
+     title:'Comparing the Features of OpenAPI v3 vs OpenAPI v2',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Comparing-the-Features-of-OpenAPI-v3-vs-OpenAPI-v2-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/kristopher_2-96x96.jpg',
+     author:'Kristopher Sandoval',
+     date:'June 21, 2022',
+     month:'June',
+     forw:'Learn More',
+     link:'https://nordicapis.com/comparing-the-features-of-openapi-v3-vs-openapi-v2/'
+     },
+        {
+         id:'23',
+     title:'Using AWS Lambda Function URLs',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Using-AWS-Lambda-Function-URLs-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/J-SIMPSON-125x125.jpg',
+     author:'J Simpson',
+     date:'June 16, 2022',
+     month:'June',
+     forw:'Learn More',
+     link:'https://nordicapis.com/using-aws-lambda-function-urls/'
+     },
+     v
+        {
+         id:'24',
+     title:'How APIs Are Enabling Open Banking',
+     img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/How-APIs-Are-Enabling-Open-Banking-750x300.png',
+     logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Devin-Partida-125x125.png',
+     author:'Devin Partida',
+     date:'June 13, 2022',
+     month:'June',
+     forw:'Learn More',
+     link:'https://nordicapis.com/how-apis-are-enabling-open-banking/'
+     },
+     {
+      id:'25',
+      title:'How to Build an API Monetization Strategy',
+      img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/How-to-Build-an-API-Monetization-Strategy-750x300.png',
+      logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Rakshith-Rao-CEO-and-Co-Founder-e1655331312409-100x100.jpeg',
+      author:'Rakshith Rao',
+      date:'January 15, 2022',
+      month:'January',
+      forw:'Learn More',
+      link:'https://nordicapis.com/how-to-build-an-api-monetization-strategy/'
+     },
+        {
+      id:'26',
+      title:'How APIs Can Give Your Product a Competitive Advantage',
+      img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/How-APIs-Can-Give-Your-Product-a-Competitive-Advantage-750x300.png',
+      logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/adrian-johansen-125x125.jpg',
+      author:'Adrian Johansen',
+      date:'February 23, 2022',
+      month:'February',
+      forw:'Learn More',
+      link:'https://nordicapis.com/how-apis-can-give-your-product-a-competitive-advantage/'
+     },
+        {
+      id:'27',
+      title:'How To Spot Malicious API Behavior',
+      img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/How-To-Spot-Malicious-API-Behavior-750x300.png',
+      logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/logo_small-96x96.jpg',
+      author:'Nordic APIs',
+      date:'March 1, 2022',
+      month:'March',
+      forw:'Learn More',
+      link:'https://nordicapis.com/how-to-spot-malicious-api-behavior/'
+     },
+        {
+      id:'28',
+      title:'10+ Cloud Storage APIs Compared',
+      img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/10-Cloud-Storage-APIs-Compared-750x300.png',
+      logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Vyom-100x100.jpeg',
+      author:'Vyom Srivastava',
+      date:'April 28, 2022',
+      month:'April',
+      forw:'Learn More',
+      link:'https://nordicapis.com/10-cloud-storage-apis-compared/'
+     },
+        {
+      id:'29',
+      title:'How Should APIs Adopt a ‘Least Privilege’ Security Model?',
+      img:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/How-Should-APIs-Adopt-a-Least-Privilege-Security-Model--750x300.png',
+      logo:'https://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/art-anthony-nordic-apis-contributor-96x96.png',
+      author:'Art Anthony',
+      date:'May 3, 2022',
+      month:'May',
+      forw:'Learn More',
+      link:'https://nordicapis.com/how-should-apis-adopt-a-least-privilege-security-model/'
+     }
+    ]
