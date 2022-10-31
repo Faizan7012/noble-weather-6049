@@ -9,7 +9,7 @@ return  <Box w='100%'>
 
          <Box w='30%'>
  
-            <Heading fontSize='15px'>{p1}</Heading>
+            <Heading fontSize={['12px','15px','15px']}>{p1}</Heading>
 
           </Box>
 
@@ -18,7 +18,7 @@ return  <Box w='100%'>
 
             <Flex w='95%' justifyContent='space-between' alignItems='center'>
 <Flex w='100px' justifyContent='center'>      
-<Heading fontSize='15px'>
+<Heading fontSize={['10px','12px','15px']}>
 {
  p2=='ok'?<Image src='https://about.codecov.io/wp-content/themes/codecov/assets/icons/pricing-icons/value--true.svg' />:
  p2=='no'?<Image src='https://about.codecov.io/wp-content/themes/codecov/assets/icons/pricing-icons/value--false.svg' />:p2
@@ -27,7 +27,7 @@ return  <Box w='100%'>
 </Flex>
 
 <Flex w='100px' justifyContent='center'>        
-<Heading fontSize='15px'>
+<Heading fontSize={['10px','12px','15px']}>
 
 {
  p3=='ok'?<Image src='https://about.codecov.io/wp-content/themes/codecov/assets/icons/pricing-icons/value--true.svg' />:
@@ -38,7 +38,7 @@ return  <Box w='100%'>
 
 
 <Flex w='100px' justifyContent='center'>        
-<Heading fontSize='15px'>
+<Heading fontSize={['10px','12px','15px']}>
 
 {
  p4=='ok'?<Image src='https://about.codecov.io/wp-content/themes/codecov/assets/icons/pricing-icons/value--true.svg' />:
@@ -49,7 +49,7 @@ return  <Box w='100%'>
 
 
 <Flex w='100px' justifyContent='center'>        
-<Heading fontSize='15px'>
+<Heading fontSize={['10px','12px','15px']}>
 
 {
  p5=='ok'?<Image src='https://about.codecov.io/wp-content/themes/codecov/assets/icons/pricing-icons/value--true.svg' />:

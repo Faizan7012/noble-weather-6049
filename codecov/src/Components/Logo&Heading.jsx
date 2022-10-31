@@ -4,7 +4,7 @@ function LogoHeading({img,title}){
 
  return <Flex align='center' gap='30px' justifyContent='left' mb='40px'>
             <Image maxW='50px' maxH='50px' src={img} />
-            <Heading fontSize='25px'>{title}</Heading>
+            <Heading fontSize={['18px','20px','25px']}>{title}</Heading>
         </Flex>
 
 }

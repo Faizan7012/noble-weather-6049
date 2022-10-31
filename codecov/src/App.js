@@ -8,10 +8,10 @@ function App() {
     <div className="App">
       <Box className='ad' bg='#0f1b29' p='10px'>
         <Center>
-        <Text color='gray' fontWeight='400' >Coming Soon! Need automated test selection powered by code coverage data? Learn more.</Text>
+        <Text fontSize={['10px','12px','16px']} color='gray' fontWeight='400' >Coming Soon! Need automated test selection powered by code coverage data? Learn more.</Text>
         </Center>
       </Box>
-     <Navbar />
+     {/* <Navbar /> */}
      <AllRoutes />
      <Footer />
     </div>

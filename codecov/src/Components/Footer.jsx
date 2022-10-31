@@ -9,9 +9,9 @@ function Footer(){
               </div>
        <footer>
         <Box>
-            <Flex maxW='600px' justifyContent='space-between' alignItems='center' p='0px 120px'>
+            <Flex maxW='600px' justifyContent='space-between' alignItems='center' p={['10px 20px','10px 20px','0px 120px']}>
                 <Box>
-                <Avatar name='Codecov' src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/codecov/codecov-circle.svg' />
+                <Avatar position='none' name='Codecov' src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/codecov/codecov-circle.svg' />
                 </Box>
              <Box>
              <Tooltip label='LinkedIn' fontSize='md'>
@@ -51,8 +51,8 @@ function Footer(){
                 
             </Flex>
         </Box>
-        <Box p='0px 120px' mt='80px'>
-            <Flex justifyContent='space-between'>
+        <Box p={['10px 100px','10px 100px','0px 120px']} mt='80px'>
+            <Flex justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} gap={['30px','30px','auto']}>
 
 
              <Flex direction='column' lineHeight='30px' color='#ffffff'>

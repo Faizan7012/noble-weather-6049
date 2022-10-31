@@ -202,7 +202,6 @@ export const customers=['https://www.freepnglogos.com/uploads/philips-logo-0.jpg
        'https://about.codecov.io/wp-content/uploads/2021/06/EquityZen-Logo-2.svg'
     ],
     ['https://about.codecov.io/wp-content/uploads/2021/06/mux.svg',
-     'https://about.codecov.io/wp-content/uploads/2021/02/healthsherpa-logo.png',
     'https://about.codecov.io/wp-content/uploads/2021/02/oyster-logo.svg',
     'https://about.codecov.io/wp-content/uploads/2021/02/ujet-logo.svg']
     ]

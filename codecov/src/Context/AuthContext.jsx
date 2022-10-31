@@ -6,7 +6,7 @@ function AuthContextProvider({ children }) {
   const [isAuth, setAuth] = React.useState(false);
 
   function toggleAuth() {
-    setAuth(!isAuth);
+    setAuth(!isAuth)
   }
 
   return (

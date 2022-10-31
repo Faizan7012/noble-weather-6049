@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react';
-import {Flex,Box,Image,Heading,Input,FormControl,FormLabel,Button,Grid,Select, GridItem, Textarea} from '@chakra-ui/react'
+import {Flex,Box,Image,Heading,Input,FormControl,FormLabel,Button,Grid,Select, GridItem,Center, Textarea} from '@chakra-ui/react'
 import {customers} from '../Components/Data';
 
 const initialState = {
@@ -20,11 +20,9 @@ const [reply,setReply] = useState(initialState);
         document.title = 'Contact - Codecov';
         let body =  document.querySelector('body')
         body.style.backgroundImage = 'none';
-        let nav =  document.querySelector('nav')
         let footer =  document.querySelector('footer')
         let div =  document.querySelector('#slanted_div')
         let ad =  document.querySelector('.ad')
-        nav.style.display = 'none'
         footer.style.display = 'none'
         div.style.display = 'none'
         ad.style.display = 'none'
@@ -51,9 +49,9 @@ const [reply,setReply] = useState(initialState);
 
 
 
-return <Flex h='100vh'>
+return <Flex h={['auto','auto','100vh']} justifyContent={['center','center','space-between']} flexDirection={['column','row','row']}>
 
-    <Box h='100vh' w='50%' bg='#0f1b29' p='20px 60px'>
+    <Box h={['auto','auto','100vh']} w={['100%','100%','50%']} display={['none','none','block']} bg='#0f1b29' p={['10px','10px','20px 60px']}>
 
     <Image maxW='200px' src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/logos/codecov.svg'/>
     <Box mt='100px' p='20px' color='white' pr='100px' ml='50px'>
@@ -89,49 +87,49 @@ return <Flex h='100vh'>
 
      </Box>
     </Box>
-    <Box h='100vh' w='50%'>
+    <Box h={['auto','auto','100vh']}  w={['100%','100%','50%']} >
 
 
-       <Box h='70vh' w='60%' m='auto' mt='70px'>
+       <Box h='70vh' w={['90%','90%','60%']} m='auto' mt='70px'>
 
 
-      <Grid   templateColumns='repeat(2, 1fr)' gap='10px' rowGap='20px'>
+      <Grid templateColumns='repeat(2, 1fr)' gap='10px' rowGap='20px'>
 
        
   <GridItem>
-  <FormControl isRequired>
+  <FormControl position='none' isRequired>
      <FormLabel fontSize='13px'>First name</FormLabel>
-    <Input fontSize='13px' name='fname' type='text' value={reply.fname} onChange={(e)=>handleChange(e)}/>
+    <Input position='none' fontSize='13px' name='fname' type='text' value={reply.fname} onChange={(e)=>handleChange(e)}/>
    </FormControl>
   </GridItem>
 
 
 <GridItem>
-<FormControl isRequired>
+<FormControl position='none' isRequired>
      <FormLabel fontSize='13px'>Last name</FormLabel>
-    <Input fontSize='13px' name='lname' type='text' value={reply.lname} onChange={(e)=>handleChange(e)} />
+    <Input position='none' fontSize='13px' name='lname' type='text' value={reply.lname} onChange={(e)=>handleChange(e)} />
    </FormControl>
 </GridItem>
 
  <GridItem>
- <FormControl isRequired>
+ <FormControl position='none' isRequired>
      <FormLabel fontSize='13px'>Email Address</FormLabel>
-    <Input fontSize='13px' name='email' type='email' value={reply.email} onChange={(e)=>handleChange(e)}/>
+    <Input position='none' fontSize='13px' name='email' type='email' value={reply.email} onChange={(e)=>handleChange(e)}/>
    </FormControl>
  </GridItem>
 
 
    <GridItem>
-   <FormControl isRequired>
+   <FormControl position='none' isRequired>
      <FormLabel fontSize='13px'>Phone Number</FormLabel>
-    <Input fontSize='13px' name='phone' type='number' value={reply.phone} onChange={(e)=>handleChange(e)}/>
+    <Input position='none' fontSize='13px' name='phone' type='number' value={reply.phone} onChange={(e)=>handleChange(e)}/>
    </FormControl>
    </GridItem>
 
   <GridItem colSpan={2}>
-  <FormControl>
+  <FormControl position='none'>
   <FormLabel fontSize='13px'>Contact Reason <span style={{color:'red'}}>*</span></FormLabel>
-  <Select fontSize='13px' name='reason' value={reply.reason} onChange={(e)=>handleChange(e)}>
+  <Select position='none' fontSize='13px' name='reason' value={reply.reason} onChange={(e)=>handleChange(e)}>
     <option></option>
     <option value='General Inquiry'>General Inquiry</option>
     <option value='Become A Partner'>Become A Partner</option>
@@ -142,15 +140,16 @@ return <Flex h='100vh'>
 
 
   <GridItem colSpan={2}>
-   <FormControl isRequired>
+   <FormControl position='none' isRequired>
      <FormLabel fontSize='13px'>Massage</FormLabel>
-    <Textarea fontSize='13px' resize='none' name='massage' type='text' value={reply.massage} onChange={(e)=>handleChange(e)} h='120px'/>
+    <Textarea position='none' fontSize='13px' resize='none' name='massage' type='text' value={reply.massage} onChange={(e)=>handleChange(e)} h='120px'/>
    </FormControl>
    </GridItem>
       </Grid>
-      <Button onClick={handleReply} bg='#f06' _hover={{bg:'#f06'}} h='45px' color='#fff' mt='20px' w='400px'>Submit</Button>
+      <Center>
+      <Button onClick={handleReply} bg='#f06' _hover={{bg:'#f06'}} h='45px' color='#fff' mt='20px' w={['100%','100%','100%']}>Submit</Button>
 
-
+      </Center>
        </Box>
      
 

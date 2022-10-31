@@ -4,13 +4,13 @@ import {useEffect} from 'react';
 import LogoHeading from '../Components/Logo&Heading';
 import Table from '../Components/Table';
 import FaqDiv from '../Components/Faq';
+import Navbar from '../Components/Navbar';
 function Pricing(){
 
     useEffect(()=>{
          document.title = 'Pricing - Codecov';
         let body =  document.querySelector('body')
          body.style.backgroundImage = 'none';
-         let nav =  document.querySelector('nav')
          let footer =  document.querySelector('footer')
          let div =  document.querySelector('#slanted_div')
          let ad =  document.querySelector('.ad')
@@ -18,7 +18,6 @@ function Pricing(){
    
    
    
-         nav.style.display = 'block'
          footer.style.display = 'block'
          div.style.display = 'block'
          ad.style.display = 'block'
@@ -26,9 +25,10 @@ function Pricing(){
 
     },[])
 
-    return <Box mt='100px'>
+    return <><Navbar />
+    <Box mt={['40px','40px','100px']}>
 
-       <Flex w='42%' m='auto' ml='45%' justifyContent='space-between' mb='20px'>
+       <Flex display={['none','none','flex']} w={['100%','100%','42%']} m='auto' ml='45%' justifyContent='space-between' mb='20px'>
            <Image maxW='100px' maxH='70px' src='https://about.codecov.io/wp-content/uploads/2022/05/umbrella.png' />
            <Image maxW='100px' maxH='70px' src='https://about.codecov.io/wp-content/uploads/2022/05/parasol.png' />
            <Image maxW='100px' maxH='70px' src='https://about.codecov.io/wp-content/uploads/2022/05/partytent.png' />
@@ -36,10 +36,10 @@ function Pricing(){
 
        </Flex>
     
-    <Box padding='20px 60px' w='100%' m='auto' position='sticky' top='0' bg='white' p='10px 10%'>
-        <Flex justifyContent='space-between' alignItems='center' colGap='100px'>
-            <Heading w='30%'>Compare Plans</Heading>
-            <Box w='60%'>
+    <Box padding='20px 60px' w='100%' m='auto' position={['none','none','sticky']} top='0' bg='white' p='10px 10%'>
+        <Flex justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} alignItems='center' colGap='100px'>
+            <Heading w={['100%','100%','30%']} textAlign='center' mb={['40px','40px','auto']}>Compare Plans</Heading>
+            <Box w={['100%','100%','60%']}>
                 <Flex justifyContent='space-between'>
                 <PlansDiv title='Open Source' price='Free' bt='Get Started' bc='#0e1b29'/>
                 <PlansDiv title='Basic' price='Free' bt='Get Started' mt='7px' bc='#0e1b29'/>
@@ -62,10 +62,9 @@ function Pricing(){
 
       <Box>
  
-       <Table p1='Users' p2='Unlimited' p3='Upto 5 Users' p4='Customizable' p5='Customizable' />
+       <Table p1='Users' p2='ok' p3='ok' p4='ok' p5='ok' />
 
       </Box>
-
      </Box>
 
 
@@ -99,8 +98,8 @@ function Pricing(){
 
 <Box>
 
- <Table p1='Public' p2='Unlimited' p3='Unlimited' p4='Unlimited' p5='Unlimited' />
- <Table p1='Private' p2='no' p3='Unlimited' p4='Unlimited' p5='Unlimited' />
+ <Table p1='Public' p2='ok' p3='ok' p4='ok' p5='ok' />
+ <Table p1='Private' p2='no' p3='ok' p4='ok' p5='ok' />
 
 </Box>
 
@@ -121,7 +120,7 @@ function Pricing(){
 
 <Box>
 
- <Table p1='Private repo uploads' p2='no' p3='250' p4='Unlimited' p5='Unlimited' />
+ <Table p1='Private repo uploads' p2='no' p3='250' p4='ok' p5='ok' />
 
 </Box>
 
@@ -195,7 +194,7 @@ function Pricing(){
 <Box>
 
  <Table p1='SAML*' p2='ok' p3='ok' p4='ok' p5='ok' />
- <Table p1='SOC2 Report' p2='no' p3='no' p4='Available' p5='Available' />
+ <Table p1='SOC2 Report' p2='no' p3='no' p4='ok' p5='ok' />
  <Table p1='SOC3' p2='ok' p3='ok' p4='ok' p5='ok' />
 
 </Box>
@@ -256,7 +255,7 @@ function Pricing(){
 
 
 
-      <Box w='50%' m='auto' mb='200px' mt='200px'>
+      <Box w={['80%','80%','50%']} m='auto' mb='200px' mt='200px'>
 
 
        <FaqDiv title ='Which plan is best for me?'
@@ -302,6 +301,7 @@ function Pricing(){
 
 
     </Box>
+    </>
 
 }
 

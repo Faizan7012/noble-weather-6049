@@ -13,14 +13,12 @@ function Login(){
       document.title = 'Login - Codecov';
       let body =  document.querySelector('body')
       body.style.backgroundImage = 'none';
-      let nav =  document.querySelector('nav')
       let footer =  document.querySelector('footer')
       let div =  document.querySelector('#slanted_div')
       let ad =  document.querySelector('.ad')
 
 
 
-      nav.style.display = 'none'
       footer.style.display = 'none'
       div.style.display = 'none'
       ad.style.display = 'none'
@@ -67,7 +65,7 @@ if(isAuth){
 
  return <Flex h='100vh'>
 
- <Box h='100vh' w='50%' bg='#0f1b29' p='20px 60px'>
+ <Box h='100vh' w='50%' bg='#0f1b29' p='20px 60px' display={['none','none','block']}>
 
  <Image maxW='200px' src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/logos/codecov.svg'/>
  <Box mt='100px' p='20px' color='white' pr='100px' ml='50px'>
@@ -103,10 +101,16 @@ if(isAuth){
 
   </Box>
  </Box>
- <Box h='100vh' w='50%'>
+ <Box h='100vh' w={['100%','100%','50%']}>
 
       <Box>
-      <SimpleGrid w='60%' m='auto' mt='200px' columns='1' spacing='10px'>
+        <Flex justifyContent='center' mt='30px' display={['flex','flex','none']}>
+        <Image maxW='200px' src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/logos/codecov.svg'/>
+        </Flex>
+        <Heading display={['block','block','none']} color='#f06' textAlign='center' mt='60px' fontSize='20px'>Login</Heading>
+
+
+      <SimpleGrid w={['90%','90%','60%']} m='auto' mt={['30px','30px','200px']} columns='1' spacing='10px'>
     <Flex onClick={signIn3} border='1px solid #e3e3e3' justifyContent='space-around' alignItems='center' _hover={{border:'1px solid gray'}} p='15px 40px' borderRadius='10px'>
       <Image maxW='20px' src='https://about.codecov.io/wp-content/themes/codecov/assets/logos/ci/github/github-icon.svg' />
       <Heading fontSize='16px'>

@@ -25,7 +25,15 @@ code {
   background-repeat: no-repeat;
   background-size:contain;
   z-index: -2;
+}
 
+.btn-pk{
+  background-color: #f06;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  width: 120px;
+  
 }
 
 footer{
@@ -68,6 +76,7 @@ h6{
 #slanted_div{
   height: 120px;
   width: 100%;
+  display: block;
   background-color: #fff;
   position: relative;
   transform: skewY(5deg);
@@ -83,17 +92,18 @@ h6{
 
   height: 250px;
   margin: auto;
-  position: relative;
   width: 90%;
   display: grid;
   place-items: center;
   overflow: hidden;
+
   
   }
   
   .slider-track{
    display:flex;
    width: calc(250px * 18);
+   position:relative;
    animation: scroll 40s linear infinite;
   }
   @keyframes scroll {
@@ -111,6 +121,7 @@ h6{
    display: grid;
    place-items: center;
    padding: 15px;
+   position:relative;
   }
   
   .slide_img{
@@ -118,6 +129,7 @@ h6{
    transition: 1s;
    max-height: 70px;
    margin-right: 50px;
+
   }
   .slide_img1{
 
@@ -138,7 +150,6 @@ h6{
     background: none;
     border-radius: 10px;
   }
-
 
 
 /* --------------------------------end slide----------------------------- */

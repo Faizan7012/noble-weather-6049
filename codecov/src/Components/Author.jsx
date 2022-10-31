@@ -7,7 +7,7 @@ import {Avatar,Heading,Flex,Box} from '@chakra-ui/react';
     return <Box>
                <Flex justifyContent='space-between' alignItems='center'>
    
-               <Avatar w='30px' h='30px' src={logo} />
+               <Avatar position='none' w='30px' h='30px' src={logo} />
                <Heading fontSize='10px' ml='20px' color='#f06'>
                 {author}
                </Heading>

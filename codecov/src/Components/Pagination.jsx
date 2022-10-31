@@ -19,7 +19,7 @@ function Pagination({totalPage,handlePage,handleCount,page}){
                  arr.map((ele)=>{
 
 
-                     return <Button color='#f06' onClick={()=>handlePage(ele)}>{ele}</Button>
+                     return <Button position='none' color='#f06' onClick={()=>handlePage(ele)}>{ele}</Button>
 
                  })
 

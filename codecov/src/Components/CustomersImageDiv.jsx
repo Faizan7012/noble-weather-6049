@@ -5,8 +5,8 @@ function CIDiv({img,title,desc}){
 
 
 return <Box>
-        <Avatar src={img}/>
-        <Heading fontSize='25px' mt='10px'>
+        <Avatar position='none' src={img}/>
+        <Heading fontSize={['20px','20px','25px']} mt='10px'>
             {title}
         </Heading>
         <Text lineHeight='20px' mt='20px'>

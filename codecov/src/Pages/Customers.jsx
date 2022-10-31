@@ -3,6 +3,7 @@ import CIDiv from '../Components/CustomersImageDiv';
 import { SlideImage,customers,slide, language} from '../Components/Data';
 import {useState,useEffect} from 'react'
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+import Navbar from '../Components/Navbar';
 function Customers(){
 const [index,setIndex] = useState(0)
 let arr = SlideImage[index]
@@ -10,7 +11,6 @@ let brr = slide[index]
 
 useEffect(()=>{
   document.title = 'Customers - Codecov';
-  let nav =  document.querySelector('nav')
   let footer =  document.querySelector('footer')
   let div =  document.querySelector('#slanted_div')
   let ad =  document.querySelector('.ad')
@@ -18,7 +18,6 @@ useEffect(()=>{
    
 
 
-  nav.style.display = 'block'
   footer.style.display = 'block'
   div.style.display = 'block'
   ad.style.display = 'block'
@@ -44,17 +43,18 @@ else{
 }
 
 return <Box>
+      <Navbar />
       <Center>
-      <Heading>Our Customers</Heading>
+      <Heading mt={['20px','20px','80px']}>Our Customers</Heading>
       </Center>
 
 
 
-      <Flex  w='70%' m='auto' gap='130px' justify='space-between' mb='150px' mt='100px' alignItems='center'>
+      <Flex  w='70%' m='auto' gap={['40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb={['0px','10px','100px']} mt='100px' alignItems='center'>
   <Box>
   <Image 
-   maxW='500px'
-  src='https://scontent.fagr1-4.fna.fbcdn.net/v/t39.30808-6/309960652_620277152981181_1251100015772163961_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=JmskpDfC-1YAX8wfnMH&_nc_ht=scontent.fagr1-4.fna&oh=00_AT_MtTsvi0OcTAATYGTIMnsWxXMFm1M3xDxglaKbj47hvw&oe=633A3C75'
+   maxW={['300px','400px','500px']}
+  src='https://images.mgid.com/MGID_Pixel_Cloudflare_App_1_min_8af3f058bc.png'
   alt='image-1'
   borderRadius='10px' />
   </Box>
@@ -66,7 +66,7 @@ return <Box>
 
       </Flex>
 
-      <Box w='80%' m='auto' mt='50px' mb='50px'>
+      <Box w='80%' m='auto' mt={['0px','10px','100px']} mb='50px' position='none'>
 
 <div className='slider'>
 
@@ -95,7 +95,7 @@ return <Box>
 
 
     
-    <Flex  w='70%' m='auto' gap='130px' justify='space-between' mb='150px' mt='100px' alignItems='center'>
+    <Flex  w='70%' m='auto' gap={['40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb={['0px','10px','100px']} mt={['0px','10px','100px']} alignItems='center'>
    <Box>
     <CIDiv img='https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/solutions/open-source.svg'
     title='Open Source'
@@ -103,15 +103,14 @@ return <Box>
    </Box>
    <Box>
   <Image 
-   maxW='500px'
-  src='https://scontent.fagr1-1.fna.fbcdn.net/v/t39.30808-6/309678000_620277329647830_2163660437404117889_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=_N74yR5IU5cAX8y4-gl&_nc_ht=scontent.fagr1-1.fna&oh=00_AT9z2hX92lvDs_y8S3YcyCjxWy79wi1FlU8BpxY-7AqtCA&oe=633975C1'
+   maxW={['300px','400px','500px']}
+  src='https://images.mgid.com/DES_23739_Banner_615afe5ad7.png'
   alt='image-1'
   borderRadius='10px' />
   </Box>
       </Flex>
 
-
-     <Box w='80%' m='auto' mt='100px' mb='100px'>
+     <Box w='80%' m='auto' mt={['0px','10px','100px']} mb={['20px','30px','100px']} position='none'>
 
          <div className='slider'>
 
@@ -135,11 +134,11 @@ return <Box>
      </Box>
 
 
-      <Flex  w='70%' m='auto' gap='130px' justify='space-between' mb='150px' mt='100px' alignItems='center'>
+      <Flex  w='70%' m='auto' gap={['40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' mt={['0px','10px','100px']}  alignItems='center'>
       <Box>
   <Image
-  maxW='500px'
-   src='https://scontent.fagr1-4.fna.fbcdn.net/v/t39.30808-6/309548805_620273932981503_2290699329899839967_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=iGE7kk-P_aQAX9kibde&_nc_ht=scontent.fagr1-4.fna&oh=00_AT9WW7xsMF0P3-P-TRDFjL293pdWaEKH53WtJGkzV5ctig&oe=6339C649'
+  maxW={['300px','400px','500px']}
+   src='https://panticore.com/wp-content/uploads/2022/07/Programmatic-Advertising1.png'
   alt='image-1'
   borderRadius='10px' />
   </Box>
@@ -160,10 +159,10 @@ return <Box>
 
 
    <Box >
-       <Flex justifyContent='space-between' gap='40px'>
+       <Flex justifyContent='space-between' gap={['10px','20px','40px']}>
        {
   brr.map((ele)=>{
-    return <Image w='100px' h='50px' src={ele} alt='image-ele' />
+    return <Image maxW={['30px','40px','100px']} h={['50px','50px','50px']} src={ele} alt='image-ele'/>
   })
   }
        </Flex>
@@ -184,15 +183,15 @@ return <Box>
       <Box>
 
       <Center>
-        <Heading mb='60px' fontSize='30px'>Explore our Customers</Heading>
+        <Heading mb='60px' fontSize={['20px','20px','30px']}>Explore our Customers</Heading>
       </Center>
 
-      <SimpleGrid w='80%' m='auto' columns='4' spacing='25px' mb='50px'>
+      <SimpleGrid w='80%' m='auto' columns={['2','2','4']} spacing='25px' mb='50px'>
 
        {
         customers.map((ele)=>{
-          return  <Flex alignItems='center' justifyContent='center' borderRadius='10px' boxShadow='0 .5rem 1rem rgba(0,0,0,.15)' p='20px' h='200px'>
-            <Image maxW='150px' maxH='100px' src={ele} alt='ele'/>
+          return  <Flex alignItems='center' justifyContent='center' borderRadius='10px' boxShadow='0 .5rem 1rem rgba(0,0,0,.15)' p='20px 10px' h={['100px','120px','200px']}>
+            <Image maxW={['80px','100px','150px']} maxH='100px' src={ele} alt='ele'/>
             </Flex>
                })
        }

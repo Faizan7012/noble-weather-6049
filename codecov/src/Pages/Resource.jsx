@@ -1,9 +1,12 @@
 import BlogDiv from "../Components/BlogDiv";
 import {useEffect,useState} from 'react';
-import {Box,Flex, SimpleGrid,Button,Heading,Center} from '@chakra-ui/react'
+import {Box,Flex, SimpleGrid,Button,Heading,Center,Text} from '@chakra-ui/react'
 import axios from 'axios'
 import Pagination from "../Components/Pagination";
 import {useSearchParams} from 'react-router-dom';
+import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+import Navbar from "../Components/Navbar";
+
 
 const months = ['January','Fabruary','March','April','May','June','July','August','September','October','November','December','All']
 function getPageFromUrl(value) {
@@ -24,14 +27,13 @@ function Resource(){
     const value2 = searchParams.get("month")
     const [month,setMonth] = useState(value2);
     const [loading,setLoading] = useState(false);
+    const [dis,setDis] = useState(false)
 
     useEffect(()=>{
         document.title = 'Codecov - Resources';
-        let nav =  document.querySelector('nav')
         let footer =  document.querySelector('footer')
         let div =  document.querySelector('#slanted_div')
         let ad =  document.querySelector('.ad')
-        nav.style.display = 'block'
         footer.style.display = 'block'
         div.style.display = 'block'
         ad.style.display = 'block'
@@ -60,7 +62,7 @@ function Resource(){
         setLoading(false);
         month===''?setSearchParam({page}):setSearchParam({page,month})
 
-      },[page,month])
+      },[page,month,dis])
 
     const handlePage = (val)=>{
         setPage(Number(val))
@@ -69,8 +71,11 @@ function Resource(){
   const handleCount = (val)=>{
  
     setPage(page+val)
+  }
 
-
+  function HandleSet(ele){
+    setMonth(ele);
+    setDis(!dis)
   }
 
 if(loading){
@@ -79,23 +84,30 @@ if(loading){
 }
 
 return <Box>
-   <Center mb='100px'>
+  <Navbar />
+   <Center mb={['20px','20px','100px']} mt={['0px','0px','80px']}>
       <Heading>
         Resources
       </Heading>
    </Center>
+   <Box >
+   <Heading onClick={()=>setDis(!dis)} color='#f06' fontSize='15px' ml='20px' textAlign='left' mb='40px' display={['block','block','none']}>
+    Filter
+   </Heading>
+   </Box>
+
    
 
-<Flex w='80%' m='auto' justifyContent='space-between'>
+<Flex w='80%' m='auto' justifyContent={['center','center','space-between']}>
 
-<Box w='30%' ml='-50px' mb='100px'>
-     <Box w='70%' m='auto'  position='sticky' top='120px'>
+<Box w={['100%','100%','30%']} ml={['0px','0px','-50px']} padding={['0px 20px','0px 20px','10px']} borderRadius='10px' backgroundColor={['gray.200','gray.200','none']} position={['absolute','absolute','sticky']} transition='.3s ease all' left={[dis?'0':'-100%']}>
+     <Box w='70%' m='auto' position='sticky' top='120px'>
      <SimpleGrid columns='2' spacing='20px'>
 
 {
 months.map((ele)=>{
 
-return <Button bg='white' _hover={{bg:'#e6d6f3'}} variant='outline' onClick={()=>setMonth(ele)}>{ele}</Button>
+return <Button bg='white' _hover={{bg:'#e6d6f3'}} variant='outline' onClick={()=>HandleSet(ele)}>{ele}</Button>
 
 
 })
@@ -108,8 +120,8 @@ return <Button bg='white' _hover={{bg:'#e6d6f3'}} variant='outline' onClick={()=
 </Box>
 
 
-<Box w='70%' m='auto' mb='100px' ml='50px'>
-<SimpleGrid columns='2' spacing='40px'>
+<Box w={['100%','100%','70%']} ml={['0px','0px','50px']}>
+<SimpleGrid columns={['1','1','2']} spacing='40px'>
 {
 
 
@@ -120,12 +132,15 @@ return <BlogDiv data={ele} />
 }
 </SimpleGrid>
 
-<Box>
-<Pagination totalPage={totalPage} handlePage={handlePage} handleCount={handleCount} page={page}  />
-</Box>
 </Box>
 
  </Flex>
+ 
+<Center>
+<Box>
+<Pagination totalPage={totalPage} handlePage={handlePage} handleCount={handleCount} page={page}  />
+</Box>
+</Center>
 </Box>
 
 
