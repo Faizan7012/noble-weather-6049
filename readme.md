@@ -7,7 +7,12 @@
    
  <h4 align='center'>Codecov is a code analysis tool with which users can group, merge, archive, and compare coverage reports.</p>
  
+ ### Live Link
  
+ <a target='_blank' href='https://codecov-ashen.vercel.app/'>
+ <img src='https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white' />
+ </a>
+  
  ### Duration
  
  <h4>
