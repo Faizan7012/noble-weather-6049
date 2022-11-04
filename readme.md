@@ -1,9 +1,3 @@
-Faizan-Alam unit-4 Cuntruct Week Project
+### Codecov website-clone 
 
-Tool - 
-
-1.React
-2.Chakra ui
-3.CSS
-4.HTML
-5.JavaScript
+<img src='https://faizan7012.github.io/static/media/codecov-clone.fc0b8a3d3dbe544e5ba6.png'>
