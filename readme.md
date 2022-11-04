@@ -21,9 +21,17 @@
 
 <ul align='center'>
  
- <li>User can login and logout</li>
- <li>filter and pagination</li>
- <li>Dynamic Routing</li>
- <li>Private Pages</li>
+ <li>
+  <h4>User can login and logout</h4>
+ </li>
+ <li>
+  <h4>filter and pagination</h4>
+  </li>
+ <li>
+  <h4>Dynamic Routing</h4>
+  </li>
+ <li>
+  <h4>Private Pages</h4>
+  </li>
  <li>Full responsive</li>
 </ul>
