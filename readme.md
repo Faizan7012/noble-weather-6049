@@ -33,5 +33,7 @@
  <li>
   <h4>Private Pages</h4>
   </li>
- <li>Full responsive</li>
+ <li>
+  <h4>Full responsive</h4>
+   </li>
 </ul>
