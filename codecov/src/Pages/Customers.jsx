@@ -10,6 +10,10 @@ let arr = SlideImage[index]
 let brr = slide[index]
 
 useEffect(()=>{
+  window.scroll({
+    top:0,
+    behavior:'smooth'
+})
   document.title = 'Customers - Codecov';
   let footer =  document.querySelector('footer')
   let div =  document.querySelector('#slanted_div')
@@ -50,7 +54,10 @@ return <Box>
 
 
 
-      <Flex  w='70%' m='auto' gap={['40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb={['0px','10px','100px']} mt='100px' alignItems='center'>
+      <Flex  w={['90%','90%','90%','70%']} m='auto' gap={['40px','40px','50px','130px']}
+       justifyContent={['center','center','center','space-between']} 
+       flexDirection={['column-reverse','column-reverse','column-reverse','row']}
+        mb={['0px','10px','20px','100px']} mt='100px' alignItems='center'>
   <Box>
   <Image 
    maxW={['300px','400px','500px']}
@@ -95,7 +102,7 @@ return <Box>
 
 
     
-    <Flex  w='70%' m='auto' gap={['40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb={['0px','10px','100px']} mt={['0px','10px','100px']} alignItems='center'>
+    <Flex  w='70%' m='auto' gap={['40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column-reverse','column-reverse','column-reverse','row']} mb={['0px','10px','100px']} mt={['0px','10px','100px']} alignItems='center'>
    <Box>
     <CIDiv img='https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/solutions/open-source.svg'
     title='Open Source'
@@ -110,7 +117,7 @@ return <Box>
   </Box>
       </Flex>
 
-     <Box w='80%' m='auto' mt={['0px','10px','100px']} mb={['20px','30px','100px']} position='none'>
+     <Box w={['90%','90%','90%','80%']} m='auto' mt={['0px','10px','10px','100px']} mb={['20px','30px','30px','100px']} position='none'>
 
          <div className='slider'>
 
@@ -134,10 +141,10 @@ return <Box>
      </Box>
 
 
-      <Flex  w='70%' m='auto' gap={['40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' mt={['0px','10px','100px']}  alignItems='center'>
+      <Flex  w={['90%','90%','90%','70%']} m='auto' gap={['40px','40px','40px','130px']} justifyContent={['center','center','space-between']} flexDirection={['column','column','column','row']} mb='150px' mt={['0px','10px','100px']}  alignItems='center'>
       <Box>
   <Image
-  maxW={['300px','400px','500px']}
+  maxW={['300px','400px','500px','500px']}
    src='https://panticore.com/wp-content/uploads/2022/07/Programmatic-Advertising1.png'
   alt='image-1'
   borderRadius='10px' />
@@ -186,12 +193,12 @@ return <Box>
         <Heading mb='60px' fontSize={['20px','20px','30px']}>Explore our Customers</Heading>
       </Center>
 
-      <SimpleGrid w='80%' m='auto' columns={['2','2','4']} spacing='25px' mb='50px'>
+      <SimpleGrid w='80%' m='auto' columns={['2','2','3','4']} spacing='25px' mb='50px'>
 
        {
         customers.map((ele)=>{
           return  <Flex alignItems='center' justifyContent='center' borderRadius='10px' boxShadow='0 .5rem 1rem rgba(0,0,0,.15)' p='20px 10px' h={['100px','120px','200px']}>
-            <Image maxW={['80px','100px','150px']} maxH='100px' src={ele} alt='ele'/>
+            <Image maxW={['80px','100px',,'100px','150px']} maxH='100px' src={ele} alt='ele'/>
             </Flex>
                })
        }

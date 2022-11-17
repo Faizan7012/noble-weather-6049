@@ -4,7 +4,7 @@ import {ArrowForwardIcon} from '@chakra-ui/icons'
 function CIDiv({img,title,desc}){
 
 
-return <Box>
+return <Box w='100%' m='auto'>
         <Avatar position='none' src={img}/>
         <Heading fontSize={['20px','20px','25px']} mt='10px'>
             {title}

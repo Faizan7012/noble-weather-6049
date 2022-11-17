@@ -5,10 +5,9 @@
     import {Flex,Box,Image,Heading,SimpleGrid} from '@chakra-ui/react'
     import {customers} from '../Components/Data';
     import {signInWithPopup,FacebookAuthProvider, GoogleAuthProvider, GithubAuthProvider} from 'firebase/auth'
-    import {authentication} from '../Components/firebase-config'
-function Login(){
+    import {authentication} from '../Components/firebase-config';
+    function Login(){
     const {isAuth,toggleAuth} = useContext(AuthContext);
-
     useEffect(()=>{
       document.title = 'Login - Codecov';
       let body =  document.querySelector('body')
@@ -16,9 +15,6 @@ function Login(){
       let footer =  document.querySelector('footer')
       let div =  document.querySelector('#slanted_div')
       let ad =  document.querySelector('.ad')
-
-
-
       footer.style.display = 'none'
       div.style.display = 'none'
       ad.style.display = 'none'
@@ -60,7 +56,7 @@ function Login(){
 
 
 if(isAuth){
-    return <Navigate to='/pricing' />
+    return <Navigate to='/' />
 }
 
  return <Flex h='100vh'>
@@ -110,7 +106,7 @@ if(isAuth){
         <Heading display={['block','block','none']} color='#f06' textAlign='center' mt='60px' fontSize='20px'>Login</Heading>
 
 
-      <SimpleGrid w={['90%','90%','60%']} m='auto' mt={['30px','30px','200px']} columns='1' spacing='10px'>
+      <SimpleGrid w={['100%','100%','80%','60%']} m='auto' mt={['30px','30px','200px']} columns='1' spacing='10px'>
     <Flex onClick={signIn3} border='1px solid #e3e3e3' justifyContent='space-around' alignItems='center' _hover={{border:'1px solid gray'}} p='15px 40px' borderRadius='10px'>
       <Image maxW='20px' src='https://about.codecov.io/wp-content/themes/codecov/assets/logos/ci/github/github-icon.svg' />
       <Heading fontSize='16px'>

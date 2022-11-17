@@ -1,4 +1,4 @@
-import {Box,Flex,Heading,Text,Button,Image,Center,SimpleGrid,Tooltip} from '@chakra-ui/react';
+import {Box,Flex,Heading,Text,Button,Image,Center,SimpleGrid,Tooltip, Avatar} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 import BrandsLogo from '../Components/BrandsLogo';
 import {ArrowForwardIcon} from '@chakra-ui/icons';
@@ -9,6 +9,10 @@ import Navbar from '../Components/Navbar';
 function Home(){
 
   useEffect(()=>{
+    window.scroll({
+      top:0,
+      behavior:'smooth'
+  })
     document.title = 'Codecov - The Leading Code Coverage Solution';
     let footer =  document.querySelector('footer')
     let div =  document.querySelector('#slanted_div')
@@ -23,9 +27,9 @@ return <><Navbar />
 <Box mt={['0px','0px','70px']} fontFamily='"poppins",-apple-system,BlinkMacSystemFont,Roboto,"Arial",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol'>
 
        <Box>
-        <Flex w='70%' m='auto' gap='40px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']}>
+        <Flex w={['90%','90%','90%','70%']} m='auto' gap='40px' justifyContent={['center','center',,'center','space-between']} flexDirection={['column','column','row','row']}>
             <Box lineHeight='30px'>
-                <Heading textAlign='center' fontSize={['20px','20px','60px']} mt='20px'>Ship healthier code faster with less risk.</Heading>
+                <Heading textAlign='center' fontSize={['20px','20px','40px','40px']} mt='20px'>Ship healthier code faster with less risk.</Heading>
                 <Text textAlign='center' mt='20px'>Join 1M+ developers worldwide in shipping healthier code with code coverage from Codecov.</Text>
                 <Link to='/login'>
                   <Center>
@@ -33,7 +37,7 @@ return <><Navbar />
                   </Center>
                 </Link>
             </Box>
-            <Image maxW={['250px','350px','400px']} margin='auto'
+            <Image maxW={['250px','350px',,'360px','400px']} margin='auto'
       src="https://about.codecov.io/wp-content/themes/codecov/assets/templates/home/pull-request-comments.svg"
        alt="image-1" />
         </Flex>
@@ -66,15 +70,13 @@ return <><Navbar />
        
          </Box>
 
-         <Box w='80%' m='auto' mt='40px' mb='150px'>
-             <Flex  justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} gap='40px' >
+         <Box w={['90%','90%','80%','80%']} m='auto' mt='40px' mb='150px'>
+             <Flex  justifyContent={['center','center','center','space-between']} flexDirection={['column','column','column','row']} gap='40px' >
                 <Box textAlign='center'>
                 </Box>
                 <Image maxW={['250px','350px','400px']} margin='auto'
                src='https://about.codecov.io/wp-content/themes/codecov/assets/templates/home/devops.svg'
                 alt='image-2'/>
-            
-             
 
                 <Box lineHeight='30px' fontWeight='500' fontFamily='"poppins",-apple-system,BlinkMacSystemFont,Roboto,"Arial",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol'>
                     <Box>
@@ -101,30 +103,32 @@ return <><Navbar />
             </Text>
           </Box>
 
-          <Box w='80%' m='auto' mt='40px' mb='200px'>
-            <Flex justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} gap='40px'>
+          <Box w={['90%','80%','80%','80%']} m='auto' mt='40px' mb='200px'>
+            <Flex  w={['100%','100%','100%','80%']} m='auto' justifyContent={['center','center','center','space-between']} flexDirection={['column','column','column','row']} gap='40px'>
          
-             <SimpleGrid columns='1' spacing='10px'>
-              <Flex borderRadius='50px' _hover={{bg:'#e6d6f3'}} w={['300px','400px','400px']} alignItems='center' p='15px 30px' gap='10px'>
-               <Image  maxW={['30px','40px','50px']}
+             <SimpleGrid columns='1' spacing='10px' m='auto' alignItems='center'>
+              <Flex borderRadius='50px' _hover={{bg:'#e6d6f3'}} alignItems='center' p='15px 30px' gap='20px'>
+               <Avatar
+               bg='none'
+               position='none'
                src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/solutions/flexible.svg'
                alt='image-3' />
                <Heading  fontSize={['15px','18px','20px']} fontWeight='700'>Flexible / Unified Reporting</Heading>
                 </Flex>
-                <Flex  borderRadius='50px' _hover={{bg:'#e6d6f3'}} w={['300px','400px','400px']} gap='10px' justifyContent='space-between' alignItems='center' p='15px 30px'>
-               <Image maxW={['30px','40px','50px']}
+                <Flex  borderRadius='50px' _hover={{bg:'#e6d6f3'}} gap='20px' alignItems='center' p='15px 30px'>
+               <Avatar bg='none'  position='none'
                src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/solutions/seamless.svg'
                alt='image-4' />
                <Heading   fontSize={['15px','18px','20px']} fontWeight='700'>Seamless Coverage Insights</Heading>
                 </Flex>
-                <Flex  borderRadius='50px' _hover={{bg:'#e6d6f3'}} w={['300px','400px','400px']} gap='10px' justifyContent='space-between' alignItems='center' p='15px 30px'>
-               <Image  maxW={['30px','40px','50px']}
+                <Flex  borderRadius='50px' _hover={{bg:'#e6d6f3'}} gap='20px'  alignItems='center' p='15px 30px'>
+               <Avatar bg='none'  position='none'
                src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/icons/solutions/robust.svg'
                alt='image-5' />
                <Heading mr='13px'  fontSize={['15px','18px','20px']} fontWeight='700'>Robust Coverage Controls</Heading>
                 </Flex>
              </SimpleGrid>
-              <Box p='30px' borderRadius='10px'  w={['100%','100%','55%']} lineHeight='30px' boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'  fontWeight='500' fontFamily='"poppins",-apple-system,BlinkMacSystemFont,Roboto,"Arial",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol'>
+              <Box p='30px' borderRadius='10px'  w={['100%','100%','100%','55%']} m='auto' lineHeight='30px' boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'  fontWeight='500' fontFamily='"poppins",-apple-system,BlinkMacSystemFont,Roboto,"Arial",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol'>
                
                 <Text fontWeight='bold'>As long as your code has tests and your coverage tool can output coverage results in a <span className='span'> compatible format </span>, you can use Codecov.</Text>
                 
@@ -159,7 +163,7 @@ return <><Navbar />
 
         <Box mb='40px'>
             <Center>
-            <Heading fontSize={['20px','20px','60px']} mb='20px'>Code Coverage For Any Tech Stack</Heading>
+            <Heading fontSize={['20px','20px','30px','40px']} mb='20px'>Code Coverage For Any Tech Stack</Heading>
             </Center>
             <Center>
             <Text textAlign='center'>Codecov provides highly integrated tools for developers and engineering leaders to gain</Text>
@@ -169,11 +173,12 @@ return <><Navbar />
 
             </Center>
         </Box>
-        <Box w='80%' m='auto' mt='40px' mb='150px'>
-             <SimpleGrid columns={['1','1','2']} spacing='30px' justifyContent='space-between' >
+        <Box w={['90%','90%','90%','80%']} m='auto' mt='40px' mb='150px'>
+             <SimpleGrid columns={['1','1','1','2']} spacing='30px' justifyContent='space-between' >
                 <Box >
                 <Image
-                 maxW='600px'
+               maxW={['300px','300px','450px','600px']}
+               m='auto'
                src='https://about.codecov.io/wp-content/themes/codecov/assets/brand/features/multi.svg'
                 alt='image-6'
                 mt='100px'
@@ -306,53 +311,53 @@ return <><Navbar />
           
                 </Center>
               
-       <Box position={['none','none','relative']} mt={['100px','100px','-360px']} mb='150px'>
+       <Box position={['none','none','none','relative']} mt={['100px','100px','100px','-360px']} mb='150px'>
         <Center mb='20px'>
         <Tooltip label='Tile' fontSize='md'>
-        <Image maxW='80px'  src='https://upload.wikimedia.org/wikipedia/commons/0/04/Tile_logo.png' alt='tile' />
+        <Image position='none' maxW='80px' src='https://upload.wikimedia.org/wikipedia/commons/0/04/Tile_logo.png' alt='tile' />
 
         </Tooltip>
 
         </Center>
          <Center>
-         <Flex w={['300px','400px','530px']} justifyContent='space-between' mb='20px'>
+         <Flex w={['300px','400px','500px','530px']} justifyContent='space-between' mb='20px'>
           <Tooltip label='Washington Posts' fontSize='md'>
-            <Image maxW='50px' src='data:image/png;base64,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' alt='wp'/>
+            <Image position='none' maxW='50px' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAAD19fWsrKzv7+/m5uZmZmZ4eHjCwsIzMzPy8vLg4OAHBwc4ODgZGRlsbGyOjo5ycnITExOgoKC7u7uCgoIlJSVhYWEqKipERETJyclcXFwfHx/T09O2trbc3NyWlpY+Pj5MTExVVVV+fn6enp6JiYnFCRdHAAAKVUlEQVR4nO2da4OyLBCGA7XNajta2cHO9f9/4iuaCjKD+CS5+XJ/3FjlUhiGAcZez8rKysrKysrKysrKysrKysrKysrKysrK6svkra5u23UwKBpsCSHTtqthStRbhoRM9kfadk3MiJ7O6/j9bZcd5eudzr8xH9lEbVfElJwb4yN7r+2KGFI0PSSAYVetqBOSVB0FdOcvPnJsuypmFN0ywLCbVjS6ZoDk3HZdjKh4g4Ts2q6MCY0uBeD41HZtTIh7gyQctV0bA7pzgMTvIOFxTbr9DumUBySL7vXD40QgJJ1zuuldBCSzro340W+J8NA1woCU9Wy7Sg3rIRGSQdt1alTuj0x46NSA4fVlQhJ2acQACcm1Q4jFxFfQBonU6NrZP2SP6QwkJKshWHqpFwAYPGpEQqKZfuCrTtlMR5gQjmUsF4tApx4hmYFPCJJ3I33d5zG66pfNtQthwrX8sOgydvDCasToEru3uq6RxxYQbnrPg7KytddT6Ap5iXOpqJMa2ipEBkh0HQeaesVrrWqnL2NSFzFAXiIpP1fn9fexo7zeLnMD9xpv0Ttkd9MInvhZ2bqTgydCeBaLDfIflIhcTGtTiegWhcsdnJb/me7zsoeaAc/TBSbciqW4X9b4HUb8+LqqaE8uX9gXFrui2TkQGId8bwqdesMRZk75MpEQCFhjb9ETp9NqxNJYLFR7SciU/+fhbCGUrbk2tieguOb+sh65JjAiLXlI47ti+KJlZ2N9Ln6MO/0PR1gCjBvqrBahCxMWFGVABJFuysXGP/hblJ/rYoURzsbylWsh3qSbMZ1zwPIsmT1EABFqC+gILT00pj1MuITK1lqFP0FXINkT5QPG3EOUEBEXF+4xSM/IEAVCeZauujIoCryk+Bbpj4nXoYGIuQ43oCKlAB+P6EqEO6zsTd9JpcA8OPNqvCv0m4SIufAEaqjDcviL0+ZUItxN0LI3/bEfiGW8COEJ5Esc4llRbFp61sOVZDj427oC4Q5sXy9dtdeRwCGREXpw58q01AGMEYW4CFUCpnPTnDAGxN9h7JbozHWYwL48h8M4ghwdwPhS/FtkHfayRsv2ecLRNm6KiCFIFGrGzRDCxFWagrb6pUnyFlkj95dohyVC0IBdcx1RLcLhllyinqtEfIuQWY8tMhxlesS/jxNv2PMVxe6ZRWX92o8txPCiQeiTKzMmQ8mVKLR4g3DGeueN/ewsoN9fWjrxFChkzvhQ8aw32WQsbvfbxATCBpwjHMYTwmtqLRW2afIGIesq0/TRHw9QgUJhOtugsHNEigvFOu9fBnA4A21IRnh2N+SS2Ur6wOzNO4TkZbl7vWL6Cyuf3LkoYkHYy4dH+oTaRkb4nI0nnBlZIu3oPcJ+YR+wKVZyk2K+eEK8MZ6w0A7quRnhQlxfoMhDfotwzzsj+Ftc82PSCXmL9QkJKY11A6Dwe4RXsVLoWzwLxU7woAESDlBCRiNFEqKmCe+lQhjiWay8d2mAMB6nVtJ/UMhWv0MoxRMDuLOXQ6MeZNnrEbJGepcddshFbZSwdwQjj80TJvMlOTzwAUIgmgAQjt4jnA9jQL8tQgcadxsmvAe/5Om0RQgOuw0T+iG50V2XCZPoRKffIbl6UjSxW4RbFhDoNOGPGKfpIKEQxbCElrBtQnnFp0uEwyg4PqGYohlCcHJpkNCb4XE5A4Su66ExbyOEI8WyRfOEbuRsfHjeZ4owUK1ENE4Y/OCrAoYIHeWqRcOE7koVBzVDiAUujRDK6+7mCT1sg5IRQnQh1iBhxT2bJaxcEjNAiG0UNEI4Uq2GmSLEFvuNEOIL7+YIXXXPb5ZwhK0wmCTcXT5IGFQMS0YIq1bpGiUEt1+YJqwa7ZskRDbpGyZUrpc3TIgsEX2McL3v9/tX1Qrpu4QRvt3DPKE/S2sP7iNpjLAS0Eg/ZP8/zjcQGY1iZITrLRM4HzVhS1nLKar+AcLbI4iYwCVsE+NhXMffYnOAWUI2Mj2z5gJucDRA6O2F7X5GCU9x6XletY9FoubCBnmjhKMbIUVz+RhhtFpyJY0SDlfkyYVOPkUoymxE+Ohzu087SUj5LZ+dJBRkCS2hJbSEltASWkJLaAktoSXsBmG/84TPv0gInAcHCR+lQhDhCjyy2zbhXi4HEu5LOUJkwjGSrqZtQiBdAHy86iaWkwnPUBP9A4SEbMp5zZADZAuhDUqEyx6i9glfZyErCcVTZmVCPNmLkvD5EUISisfBUUI+T4ZIuEbfIHISPSM8bJ7ByOM7sBHC0gky/Ljs4ZH3NYHwV5Ethzrq03mxtqtjlEMaIiQP7jE+8APBRe4rnvCGpwRwgxW4hU8gjOXfj66C8J2TzpmKsSxSLhz/UInwhifvc/rIroUyYfyapmn+IZCQoHcQpDoDW+QLUGaQIHmOj4Lwiqbm8OZoa5AJ487842GEim7OC00f8qp6UtPKBAvk4gmE+EcWBopz7RBh3J93MKF2KtKdell/HL1yUc3Um5oOO47wgt5NeTIcJmSHceUkMzXyt1R0MUICyjbgxK7qVLklhqUBSwnHG+xWVL2VByMkq2Gpjgd5yFQiVmw5Y000Sb81U24vPCzTM6QTcDKRqGJPJEpIZuI58Wvd71SMKrtZmr4DHsVyjZc0NiITzBWt3jWEE4qa18/L7WLZ9166Zl5qoEQ83BdkcUZzPVYYNW3Cei30JSxtQSq/eGaREjGWImGcKhOLPuEhwO+glGrDopDCQY2o6CDVW2h1CK//njkez8pUqjWexUQ5RkX6u6AVumvnf4WqgFRdyuIH5iVh8lVplqt3RFYTqpx5HZ1A1wyK2cBOwlYFqEzcpUn4Rgt9yQW6yhRoFvQIdUaFr93T2FteSTiGY1r1RKURawpbZmDX9l6Zz72U2uW2gaYXSkK/oU/eOeKdUe9vVDb9FV9s4ydp/mznDVRz/P1TtkqK6WZNCWP6BW94JU+xInWwW5zKCx2XVmTgebpu2YGFs4z/m7gYkTKFt5DisV9x0VN+0eewfBeZkMXaxKSN5dDzeyq6jDr1c++cOwkrdcHcYRtvskZRHU2k5/z0YNj0t7ayJLiV6Wxf39xT+NqZUgv2WxgLnXhpcElbEmLt3lIypmskHh+wOqyrjdwwadG8sdCKCCdjqI+78u9oGeplVo9nzweN/NMuexJ93mzpxbyj2ISZ+hqc86M3vI62OvEgL24TfWG81IzqO/0GRnlYVLdpeDrj8Ch+F+LAo7tu8S1f1YykZZCaKzN/X6ey69A5QkmW8PtlCb9flvD7ZQm/X5bw+/U/JZx3nnDTecIkZthtQhZX7jBhuD8QsnXBLLtfKJlwHbgsxNd/dJZwl619jbtJOEmChm66HaWLhPleCKejhNzq8bGThMKm8sGke4SlD3vt1iaWYj4ujnBaXh4Pqr7x+RUqCIH9B10ALAjNrJ39AWWEDW2w+IN6EVaso3+zEsLFm5u4/rQYoeLzyR1QTHjR/UTjdypYX0wt0P8RHfW/I/qlco3tQLCysrKysrKysrKysrKysrKysrKyqtB/8uS+GhebNggAAAAASUVORK5CYII=' alt='wp'/>
           </Tooltip>
           <Tooltip label='Routable' fontSize='md'>
-            <Image maxW='70px' src='https://s3-us-west-2.amazonaws.com/routable/logo/logo-navy.svg' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://s3-us-west-2.amazonaws.com/routable/logo/logo-navy.svg' alt='routable'/>
           </Tooltip>
         </Flex>
 
          </Center>
          <Center mt='60px'>
-         <Flex w={['300px','400px','800px']} justifyContent='space-between'>
+         <Flex w={['300px','400px','500px','800px']} justifyContent='space-between'>
           <Tooltip label='Grab' fontSize='md'>
-          <Image maxW='70px' src='https://about.codecov.io/wp-content/uploads/2020/08/grab.svg' alt='routable'/>
+          <Image position='none' maxW='70px' src='https://about.codecov.io/wp-content/uploads/2020/08/grab.svg' alt='routable'/>
           </Tooltip>
           <Tooltip label='Good Rx' fontSize='md'>
-            <Image maxW='70px' src='https://images.ctfassets.net/4f3rgqwzdznj/69gWpZPltpARadZPdhvjpr/df0bc54461dc86b2834407875d449dca/GoodRx_logo.svg' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://images.ctfassets.net/4f3rgqwzdznj/69gWpZPltpARadZPdhvjpr/df0bc54461dc86b2834407875d449dca/GoodRx_logo.svg' alt='routable'/>
           </Tooltip>
         </Flex>
          </Center>
 
             <Center mt='70px'>
-            <Flex w={['300px','400px','900px']}justifyContent='space-between'>
+            <Flex w={['300px','400px','500px','900px']}justifyContent='space-between'>
           <Tooltip label='SheildPay' fontSize='md'>
-            <Image maxW='70px' src='https://website.shieldpay.com/hubfs/shieldpay-logo-charcoal.svg' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://website.shieldpay.com/hubfs/shieldpay-logo-charcoal.svg' alt='routable'/>
           </Tooltip>
           <Tooltip label='AfterPay' fontSize='md'>
-            <Image maxW='70px' src='https://portal.afterpay.com/au/image/logo.svg' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://portal.afterpay.com/au/image/logo.svg' alt='routable'/>
           </Tooltip>
           </Flex>
             </Center>
             <Center mt='70px'>
-            <Flex w={['300px','400px','800px']} justifyContent='space-between'>
+            <Flex w={['300px','400px','500px','800px']} justifyContent='space-between'>
           <Tooltip label='Ujet' fontSize='md'>
-            <Image maxW='70px' src='https://ujet.cx/_next/static/media/ujet-logo.ebf9b2e5.svg' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://ujet.cx/_next/static/media/ujet-logo.ebf9b2e5.svg' alt='routable'/>
           </Tooltip>
           <Tooltip label='HPE' fontSize='md'>
-            <Image maxW='70px' src='https://1000logos.net/wp-content/uploads/2021/09/HPE-Logo.png' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://1000logos.net/wp-content/uploads/2021/09/HPE-Logo.png' alt='routable'/>
           </Tooltip>
           </Flex>
             </Center>
@@ -360,17 +365,17 @@ return <><Navbar />
             <Center mt='60px'>
             <Flex w={['300px','400px','500px']} justifyContent='space-between'>
           <Tooltip label='Ring' fontSize='md'>
-            <Image maxW='70px' src='https://site-nav.ring.com/media/ring-logo.svg' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://site-nav.ring.com/media/ring-logo.svg' alt='routable'/>
           </Tooltip>
           <Tooltip label='Hitachi' fontSize='md'>
-            <Image maxW='70px' src='https://about.codecov.io/wp-content/uploads/2021/06/hitachi.svg' alt='routable'/>
+            <Image position='none' maxW='70px' src='https://about.codecov.io/wp-content/uploads/2021/06/hitachi.svg' alt='routable'/>
           </Tooltip>
           </Flex>
             </Center>
 
             <Center mt='20px'>
             <Tooltip label='WeWork' fontSize='md'>
-            <Image maxW='100px' src='https://wework-email-logo.s3.amazonaws.com/WeWork-Logo_240x69.png' alt='routable'/>
+            <Image position='none' maxW='100px' src='https://wework-email-logo.s3.amazonaws.com/WeWork-Logo_240x69.png' alt='routable'/>
           </Tooltip>
             </Center>
         
@@ -403,8 +408,9 @@ return <><Navbar />
            type='INFOGRAPHIC' title='2020 State of Open Source Code Coverage' forward='View Infographic'/>
         </SimpleGrid>
        </Center>
-       
-        <FooterLoginDiv />
+         <Box>
+         <FooterLoginDiv />
+         </Box>
 
        </Box>
        </>

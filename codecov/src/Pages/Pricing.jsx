@@ -8,6 +8,10 @@ import Navbar from '../Components/Navbar';
 function Pricing(){
 
     useEffect(()=>{
+        window.scroll({
+            top:0,
+            behavior:'smooth'
+        })
          document.title = 'Pricing - Codecov';
         let body =  document.querySelector('body')
          body.style.backgroundImage = 'none';
@@ -28,18 +32,17 @@ function Pricing(){
     return <><Navbar />
     <Box mt={['40px','40px','100px']}>
 
-       <Flex display={['none','none','flex']} w={['100%','100%','42%']} m='auto' ml='45%' justifyContent='space-between' mb='20px'>
+       <Flex display={['none','none','none','flex']} w={['100%','100%','100%','42%']} m='auto' ml='45%' justifyContent='space-between' mb='20px'>
            <Image maxW='100px' maxH='70px' src='https://about.codecov.io/wp-content/uploads/2022/05/umbrella.png' />
            <Image maxW='100px' maxH='70px' src='https://about.codecov.io/wp-content/uploads/2022/05/parasol.png' />
            <Image maxW='100px' maxH='70px' src='https://about.codecov.io/wp-content/uploads/2022/05/partytent.png' />
            <Image maxW='100px' maxH='70px' src='https://about.codecov.io/wp-content/uploads/2022/05/gazebo.png' />
-
        </Flex>
     
     <Box padding='20px 60px' w='100%' m='auto' position={['none','none','sticky']} top='0' bg='white' p='10px 10%'>
-        <Flex justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} alignItems='center' colGap='100px'>
-            <Heading w={['100%','100%','30%']} textAlign='center' mb={['40px','40px','auto']}>Compare Plans</Heading>
-            <Box w={['100%','100%','60%']}>
+        <Flex justifyContent={['center','center','space-between']} flexDirection={['column','column','column','row']} alignItems='center' colGap='100px'>
+            <Heading w={['100%','100%','100%','30%']} textAlign='center' mb={['40px','40px','40px','auto']}>Compare Plans</Heading>
+            <Box w={['100%','100%','100%','60%']}>
                 <Flex justifyContent='space-between'>
                 <PlansDiv title='Open Source' price='Free' bt='Get Started' bc='#0e1b29'/>
                 <PlansDiv title='Basic' price='Free' bt='Get Started' mt='7px' bc='#0e1b29'/>
