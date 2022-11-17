@@ -6,12 +6,15 @@ import {useEffect} from 'react'
 import Navbar from "../Components/Navbar";
 function Features(){
   useEffect(()=>{
+  window.scroll({
+    top:0,
+    behavior:'smooth'
+})
     document.title = 'Features - Codecov';
     let footer =  document.querySelector('footer')
     let div =  document.querySelector('#slanted_div')
     let ad =  document.querySelector('.ad')
     document.body.style.backgroundImage='url("https://about.codecov.io/wp-content/themes/codecov/assets/backgrounds/bg-blobs-02.svg")';
-
 
 
     footer.style.display = 'block'
@@ -26,12 +29,12 @@ function Features(){
 
                 </Center>
             </Box>
-            <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' alignItems='center'>
+            <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']} flexDirection={['column','column',"column",'row']} mb='150px' alignItems='center'>
              <FeaturesDiv title='Impact Analysis' desc='Impact Analysis takes runtime information from an application’s production environment and provides this information contextually in the Codecov dashboard and in the Codecov pull request comment. Now, in any pull …'
             forw='Read More ' />
             <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2022/06/0622_ProjectInsights.jpg' />
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column','column',"column",'row']} mb='150px' alignItems='center'>
                 <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Source-Code-Coverage-1.png'/>
                 <FeaturesDiv title='Source Code Coverag' desc='Codecov makes it easy to see absolute coverage and coverage changes overlayed with your source code, making it even easier to identify needed test areas.'
                  forw='Learn More'/>
@@ -40,7 +43,7 @@ function Features(){
             
 
 
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb='150px'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column-reverse','column-reverse','column-reverse','row']} mb='150px'>
 
 
             <FeaturesDiv title='Multi Language, Multi CI/CD'
@@ -53,7 +56,7 @@ function Features(){
 
 
 
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column','column',"column",'row']} mb='150px' alignItems='center'>
 
                 <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Pull-request-comments.png' />
                 <FeaturesDiv title='Pull Request Comments' desc='Get a summary of coverage information directly in your workflow so that you can add and update tests quickly and effectively.'
@@ -63,14 +66,14 @@ function Features(){
 
 
 
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column-reverse','column-reverse','column-reverse','row']} mb='150px' alignItems='center'>
           
              <FeaturesDiv title='Status Checks' desc='Block underperforming pull requests from being merged with status checks. No more indecision if a code change has enough test coverage.'
              forw='Learn More' />
              <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Status-Checks-1.png' />
 
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column','column',"column",'row']} mb='150px' alignItems='center'>
              
              <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Gthub-Badges.png' />
              <FeaturesDiv title='Badges'
@@ -78,21 +81,21 @@ function Features(){
              forw='Learn More' />
 
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column-reverse','column-reverse','column-reverse','row']} mb='150px' alignItems='center'>
             
               <FeaturesDiv title='Report Merging' desc='Do you generate multiple coverage reports? Codecov can handle merging them seamlessly, whether you upload multiple reports at once or across different CI/CDs'
               forw='Learn More' />
               <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Report-Merging.png' />
 
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column','column',"column",'row']} mb='150px' alignItems='center'>
             
               <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Flags.png' />
               <FeaturesDiv title='Flags' desc='Do you split your testing between your frontend and backend? Maybe collect coverage by project in a monorepository? You can isolate coverage information based on groupings using Codecov Flags.'
               forw='Learn More' />
 
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column-reverse','column-reverse','column-reverse','row']} mb='150px' alignItems='center'>
              
              <FeaturesDiv 
               title='YAML'
@@ -101,7 +104,7 @@ function Features(){
              />
              <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/YAML.png' />
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column','column',"column",'row']} mb='150px' alignItems='center'>
             <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Carryforward-flags.png' />
             <FeaturesDiv 
               title='Carryforward Flags'
@@ -110,7 +113,7 @@ function Features(){
             />
 
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column-reverse','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column-reverse','column-reverse','column-reverse','row']} mb='150px' alignItems='center'>
             <FeaturesDiv 
               title='GitHub Checks'
               desc='Want to see uncovered lines directly on a GitHub pull request? Our GitHub Checks feature shows you line-by-line coverage so you can stay in your workflow.'
@@ -120,7 +123,7 @@ function Features(){
 
 
              </Flex>
-             <Flex w='70%' m='auto' gap='130px' justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} mb='150px' alignItems='center'>
+             <Flex w={['90%','90%','90%','70%']} m='auto' gap='130px' justifyContent={['center','center','center','space-between']}  flexDirection={['column','column',"column",'row']} mb='150px' alignItems='center'>
              <FeaturesImage img='https://about.codecov.io/wp-content/uploads/2020/10/Notifications.png' />
             <FeaturesDiv 
               title='Notifications'

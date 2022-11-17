@@ -1,4 +1,4 @@
-import { Box,Flex,Avatar,Tooltip,Heading,Divider,Text } from '@chakra-ui/react';
+import { Box,Flex,Avatar,Tooltip,Heading,SimpleGrid,Text } from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 
 function Footer(){
@@ -52,9 +52,7 @@ function Footer(){
             </Flex>
         </Box>
         <Box p={['10px 100px','10px 100px','0px 120px']} mt='80px'>
-            <Flex justifyContent={['center','center','space-between']} flexDirection={['column','row','row']} gap={['30px','30px','auto']}>
-
-
+            <SimpleGrid columns={['1','2','3','6']} spacing={['30px','30px','30px','auto']}>
              <Flex direction='column' lineHeight='30px' color='#ffffff'>
                 <Heading fontSize='17px' mb='20px' color='#fff'>PRODUCT</Heading>
                 <Link to='/features'>Features</Link>
@@ -96,7 +94,7 @@ function Footer(){
                 <Link to='/login'>Demo</Link>
                 <Link to='/contact'>Support</Link>
              </Flex>
-            </Flex>
+            </SimpleGrid>
         </Box>
         <Box mt='70px' bg='#0c1622' borderTop='1px solid #132234' p='20px 30px' color='#ffffff'>
             <Flex justifyContent='space-around'>

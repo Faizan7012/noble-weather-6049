@@ -16,7 +16,7 @@ const Navbar = ()=>{
   }
 
   return(<>
-       <Box padding='0px 100px' marginTop='30px' display={['none','none','block']}>
+       <Box padding='0px 100px' marginTop='30px' display={['none','none','none','block']}>
        <Flex minWidth='max-content' alignItems='center' gap='2'>
   <Box p='2'>
     <Link to='/'>
@@ -65,7 +65,7 @@ const Navbar = ()=>{
 
 {/* ---------------------------------------------------------------------------------------------------------------------------------------- */}
 
-    <Box mb='80px' display={['block','block','none']} bg='gray.200' padding='10px 0px'  position='sticky' top='0'>
+    <Box mb='80px' display={['block','block','blog','none']} bg='gray.200' padding='10px 0px'  position='sticky' top='0'>
         <Flex w='100%' m='auto' justifyContent='space-between' padding='0px 30px' alignItems='center'>
         <Box>
           <Link to='/'>

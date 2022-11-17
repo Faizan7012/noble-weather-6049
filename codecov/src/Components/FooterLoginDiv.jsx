@@ -43,11 +43,10 @@ function FooterLoginDiv(){
 
 
 return <Center mb='100px'>
-<Box w={['80%','80%','50%']} p='10px 30px' pb='20px' borderRadius='10px' boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
+<Box w={['90%','90%','80%','50%']} p='10px 30px' pb='20px' borderRadius='10px' boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
   <Box>
     <Center>
     <Heading textAlign='center' mt='30px' fontSize='30px'>Ready to get covered?</Heading>
-
     </Center>
   </Box>
   <Box>

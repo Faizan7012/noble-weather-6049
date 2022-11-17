@@ -1,35 +1,38 @@
-import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
-import {Box,Button,Flex} from '@chakra-ui/react'
-
-function Pagination({totalPage,handlePage,handleCount,page}){
-
-    let n = Math.ceil(totalPage/6)
-
- const arr = [];
-
-  for(let i=1;i<=n;i++){
-    arr.push(i)
-  }
-
- return <Box w='43%' m='auto' mt='50px'>
-            <Flex justifyContent='space-around' alignItems='center'>
-              <ArrowBackIcon _disabled={page===1} onClick={()=>handleCount(-1)} color='#f06'/>
-              {
-
-                 arr.map((ele)=>{
-
-
-                     return <Button position='none' color='#f06' onClick={()=>handlePage(ele)}>{ele}</Button>
-
-                 })
-
-              }
-
-              <ArrowForwardIcon _disabled={page===totalPage} onClick={()=>handleCount(1)} color='#f06'/>
-
-            </Flex>
-        </Box>
-
+import './pagination.css'
+import {Box} from '@chakra-ui/react'
+import ReactPaginate from "react-paginate";
+function PAgination({totalPage,handlePage,page}){
+    let n = Math.ceil(totalPage/6);
+    const handlePageClick = (data) => {    
+        let currentPage = data.selected + 1;
+        handlePage(currentPage)
+        window.scroll({
+            top:40,
+            behavior:'smooth'
+        })
+    }
+ return  <Box mb='80px' mt='80px'>
+        <ReactPaginate
+        previousLabel={"Prev"}
+        nextLabel={"Next"}
+        forcePage={page-1}
+        breakLabel={"..."}
+        pageCount={n}
+        marginPagesDisplayed={1}
+        pageRangeDisplayed={0}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination justify-content-center"}
+        pageClassName={"page-item"}
+        pageLinkClassName={"page-link"}
+        previousClassName={"page-item"}
+        previousLinkClassName={"page-link"}
+        nextClassName={"page-item"}
+        nextLinkClassName={"page-link"}
+        breakClassName={"page-item"}
+        breakLinkClassName={"page-link"}
+        activeClassName={"active"}
+      />
+</Box>
 }
 
-export default Pagination;
+export default PAgination;

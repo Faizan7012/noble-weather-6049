@@ -6,6 +6,10 @@ import {useEffect} from 'react';
 import Navbar from '../Components/Navbar';
 function Integration(){
   useEffect(()=>{
+    window.scroll({
+      top:0,
+      behavior:'smooth'
+  })
     document.title = 'Integration - Codecov';
     let footer =  document.querySelector('footer')
     let div =  document.querySelector('#slanted_div')
@@ -20,7 +24,7 @@ function Integration(){
   },[])
 return <><Navbar />
 
-<Box w='70%' m='auto'>
+<Box w={['90%','90%','80%','70%']} m='auto'>
     <Center>
     <Heading mt={['0px','0px','80px']} mb='100px'>Integrate Codecov</Heading>
 
@@ -29,7 +33,7 @@ return <><Navbar />
   <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
         LANGUAGE
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   language.map((ele)=>{
@@ -45,7 +49,7 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
  <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  SOURCE CODE HOSTING
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   hosts.map((ele)=>{
@@ -61,7 +65,7 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
  <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  CONTINUOUS INTEGRATION
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   ci.map((ele)=>{
@@ -77,7 +81,7 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
  <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  CLOUD PLATFORMS
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   cp.map((ele)=>{
@@ -93,7 +97,7 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
  <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  TEST SUITES
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   ts.map((ele)=>{
@@ -108,7 +112,7 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
  <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  COVERAGE TOOLS
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   CTool.map((ele)=>{
@@ -124,7 +128,7 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
  <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  UPLOADERS
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   Uploaders.map((ele)=>{
@@ -141,7 +145,7 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
  <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  CHAT INTEGRATIONS
     </Heading>
-    <SimpleGrid columns={['2','3','4']} spacing='20px' mt='30px'>
+    <SimpleGrid columns={['2','3','3','4']} spacing='20px' mt='30px'>
 
 {
   ChatIn.map((ele)=>{
@@ -158,9 +162,8 @@ return <LanguageDiv img={ele.img} name={ele.name}/>
     <Heading ml={['0px','0px','10px']} fontSize='12px' color='#6c757d' letterSpacing='1px' fontWeight='800'>
  OTHER INTEGRATIONS
     </Heading>
-    <Box w='32%' mt='20px'>
+    <Box w={['80%','80%','50%','32%']} mt='20px'>
     <LanguageDiv img='https://about.codecov.io/wp-content/uploads/2020/08/sourcegraph-icon.svg' name='Sourcegraph Browser Plugin'/>
-
     </Box>
  </Box>
 

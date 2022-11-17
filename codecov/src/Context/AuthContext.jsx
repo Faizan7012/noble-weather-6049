@@ -1,14 +1,14 @@
 import React from "react";
+import { useState } from "react";
 
 export const AuthContext = React.createContext();
-
+const codeCovAuth = JSON.parse(localStorage.getItem('authCodecov'))||false
 function AuthContextProvider({ children }) {
-  const [isAuth, setAuth] = React.useState(false);
-
+  const [isAuth,setIsAuth] = useState(codeCovAuth)
   function toggleAuth() {
-    setAuth(!isAuth)
+    setIsAuth(!isAuth)
+    localStorage.setItem('authCodecov',!isAuth)
   }
-
   return (
     <AuthContext.Provider value={{ isAuth, toggleAuth }}>
       {children}
