@@ -103,9 +103,6 @@ return <Button bg='white' _hover={{bg:'#e6d6f3'}} position='none' variant='outli
 
 </Box>
 <Box w={['100%','100%','100%','70%']} ml={['0px','0px','0px','50px']}>{
-  data.length===0?<Text mt='170px' ml='180px'>
-    No Data Found
-  </Text>:
 loading?<Box m='auto' mt='60px' mb='50px'>
  <Flex w='100%' m='auto' gap='20px' justifyContent='center' flexDirection={['column','column','row','row']}>
  <Skeleton m='auto' w={['90%','90%','100%','100%']} height='200px' />
